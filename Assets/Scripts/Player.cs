@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
 
     private float movementX;
+    [SerializeField] private float scrollSpeed = 3f;
 
     private Rigidbody2D playerBody;
 
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
 
     private void MovePlayer()
     {
-        playerBody.velocity = new Vector2(movementX * moveSpeed, 0f);
+        playerBody.velocity = new Vector2(movementX * moveSpeed, scrollSpeed);
     }
     
     private void FlipPlayer()
