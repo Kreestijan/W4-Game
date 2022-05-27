@@ -16,17 +16,27 @@ public class ParallaxBackground : MonoBehaviour
     private float offsetPositionY;
 
 
-
-    private void Start()
+    private void Awake()
     {
+        GetComponentsForParallax();
+    }
+    
+    void LateUpdate()
+    {
+        UseParallaxEffect();
+    }
+    
+    private void GetComponentsForParallax()
+    {
+        sprite = GetComponent<SpriteRenderer>().sprite;
+        
         cameraTransform = Camera.main.transform;
         lastCameraPosition = cameraTransform.position;
-        sprite = GetComponent<SpriteRenderer>().sprite;
         texture = sprite.texture;
         textureUnitSizeY = (texture.height / sprite.pixelsPerUnit) * transform.localScale.y;
     }
     
-    void LateUpdate()
+    private void UseParallaxEffect()
     {
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
         transform.position += deltaMovement * parallaxSpeed;
@@ -38,4 +48,5 @@ public class ParallaxBackground : MonoBehaviour
             transform.position = new Vector3(transform.position.x, cameraTransform.position.y + offsetPositionY);
         }
     }
+    
 }//class

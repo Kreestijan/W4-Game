@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-
+    //How much should the player be offset from the camera's origin point on the y axis
     [SerializeField] private float playerOffset = 4f;
 
-    private Transform player;
+    private Transform playerTransform;
 
     private Vector3 tempPos;
     
@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        if (GameObject.FindWithTag("Player") != null) player = GameObject.FindWithTag("Player").transform;
+        if (GameObject.FindWithTag("Player") != null) playerTransform = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -27,9 +27,9 @@ public class CameraFollow : MonoBehaviour
     {
         tempPos = transform.position;
 
-        if (player != null)
+        if (playerTransform != null)
         {
-            tempPos.y = player.position.y + playerOffset;
+            tempPos.y = playerTransform.position.y + playerOffset;
         }
 
         transform.position = tempPos;
