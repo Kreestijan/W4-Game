@@ -6,15 +6,18 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
 
-
-    private float movementX;
     [SerializeField] private float scrollSpeed = 3f;
+
+    private float rightEdge = 8.4f;
+    private float leftEdge = -8.4f;
+    private float movementX;
 
     private Rigidbody2D playerBody;
 
     private void Awake()
     {
         playerBody = GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
@@ -25,7 +28,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
-        FlipPlayer();
     }
     
     private void GetPlayerInput()
@@ -37,16 +39,5 @@ public class Player : MonoBehaviour
     {
         playerBody.velocity = new Vector2(movementX * moveSpeed, scrollSpeed);
     }
-    
-    private void FlipPlayer()
-    {
-        if (movementX > 0)
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        else if (movementX < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-    }
-}
+
+}//class
