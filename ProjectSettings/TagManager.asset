@@ -9,11 +9,14 @@ TagManager:
   - EdgeLeft
   - EdgeRight
   - Enemy
+  - + 2
+  - + 10
+  - + 5
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Back
+  - 
   - Water
   - UI
   - 
