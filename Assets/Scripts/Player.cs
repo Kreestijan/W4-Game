@@ -47,13 +47,15 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D collision)
     {
+        Debug.Log(playerHP);
+        Debug.Log(enemyAI.enemyHP);
+
         if(collision.gameObject.tag.Equals("Enemy")) 
         {
             
             if(playerHP > enemyAI.enemyHP)
             {
                 Destroy(enemyAI.gameObject);
-                playerHP -= enemyAI.enemyHP;
             }
                 
             if(playerHP == enemyAI.enemyHP)
@@ -65,6 +67,11 @@ public class Player : MonoBehaviour
                 Destroy(this.gameObject);
 
         }
+        playerHP -= enemyAI.enemyHP;
+        enemyAI.enemyHP -= enemyAI.enemyHP;
+        if(playerHP < 0) playerHP = 0;
+        Debug.Log(playerHP);
+        Debug.Log(enemyAI.enemyHP);
     }
 
 }//class
