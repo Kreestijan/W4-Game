@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerAppendix
+  - ScreenEdge
+  - EdgeLeft
+  - EdgeRight
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,4 +45,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3245924229
+    locked: 0
+  - name: Stars
+    uniqueID: 3397859989
+    locked: 0
+  - name: Planets
+    uniqueID: 2333653043
+    locked: 0
+  - name: Actors
+    uniqueID: 1865952487
+    locked: 0
+  - name: UI
+    uniqueID: 1529656755
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 1027315621
     locked: 0
