@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     [SerializeField] private float moveSpeed = 10f;
 
     [SerializeField] private float scrollSpeed = 3f;
+
+    [HideInInspector] public float distanceTraveled;
+
+    private float startingPositionY;
+    
     private string gateOperation;
-    private float rightEdge = 8.4f;
-    private float leftEdge = -8.4f;
+
     private float movementX;
     
     public float playerHP;
@@ -22,10 +28,18 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+        
+        distanceTraveled = 0f;
+
         playerBody = GetComponent<Rigidbody2D>();
         enemyAI = enemy.GetComponent<EnemyAI>();
     }
 
+    private void Start()
+    {
+        startingPositionY = transform.position.y;
+    }
     void Update()
     {
         GetPlayerInput();
@@ -34,6 +48,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        GetDistanceTraveled();
     }
     
     private void GetPlayerInput()
@@ -112,4 +127,11 @@ public class Player : MonoBehaviour
         Debug.Log(gateOperation.GetType());
         Operatii();
     }
+    
+    private void GetDistanceTraveled()
+    {
+        distanceTraveled = transform.position.y - startingPositionY;
+    }
+    
+
 }//class
