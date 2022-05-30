@@ -14,15 +14,15 @@ public class Player : MonoBehaviour
     
     public float playerHP;
 
-    //EnemyAI enemyAI;
-    //[SerializeField] GameObject enemy;
+    EnemyAI enemyAI;
+    [SerializeField] GameObject enemy;
   
     private Rigidbody2D playerBody;
 
     private void Awake()
     {
         playerBody = GetComponent<Rigidbody2D>();
-        //enemyAI = enemy.GetComponent<EnemyAI>();
+        enemyAI = enemy.GetComponent<EnemyAI>();
     }
 
     void Update()
@@ -49,17 +49,20 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Enemy")) 
         {
-            /*playerHP -= enemyAI.enemyHP;
+            
             if(playerHP > enemyAI.enemyHP)
+            {
                 Destroy(enemyAI.gameObject);
+                playerHP -= enemyAI.enemyHP;
+            }
+                
             if(playerHP == enemyAI.enemyHP)
             {
                 Destroy(enemyAI.gameObject);
                 Destroy(this.gameObject);
             }
             if(playerHP < enemyAI.enemyHP)
-                Destroy(this.gameObject);*/
-            Destroy(this.gameObject);
+                Destroy(this.gameObject);
 
         }
     }

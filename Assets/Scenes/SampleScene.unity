@@ -510,8 +510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   scrollSpeed: 3
-  playerHP: 0
-  enemy: {fileID: 0}
+  playerHP: 20
+  enemy: {fileID: 1213174376}
 --- !u!50 &1190096951
 Rigidbody2D:
   serializedVersion: 4
