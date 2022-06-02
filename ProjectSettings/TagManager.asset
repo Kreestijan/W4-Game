@@ -12,6 +12,8 @@ TagManager:
   - + 2
   - + 10
   - + 5
+  - Planet
+  - Collector
   layers:
   - Default
   - TransparentFX

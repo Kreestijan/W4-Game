@@ -23,8 +23,10 @@ public class Player : MonoBehaviour
 
     EnemyAI enemyAI;
     [SerializeField] GameObject enemy;
-  
+
     private Rigidbody2D playerBody;
+
+    [HideInInspector] public bool isPlayerDead = false;
 
     private void Awake()
     {
