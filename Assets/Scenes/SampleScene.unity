@@ -1771,6 +1771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet01
       objectReference: {fileID: 0}
+    - target: {fileID: 7960421284276625782, guid: 193e44df37bbf344098cf78bb11dffcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7960421284276625786, guid: 193e44df37bbf344098cf78bb11dffcb, type: 3}
       propertyPath: m_RootOrder
       value: 8
