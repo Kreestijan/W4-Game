@@ -9,11 +9,11 @@ TagManager:
   - EdgeLeft
   - EdgeRight
   - Enemy
-  - + 2
-  - + 10
-  - + 5
   - Planet
   - Collector
+  - Undefined
+  - '-'
+  - +
   layers:
   - Default
   - TransparentFX
