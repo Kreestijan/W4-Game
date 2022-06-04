@@ -778,6 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 10}
   enemyHP: 4
+  canCollide: 1
 --- !u!212 &1031865442
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -923,7 +924,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145164447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -0.54, z: 0}
+  m_LocalPosition: {x: -6.73, y: -0.42, z: 0}
   m_LocalScale: {x: 6.2878404, y: 0.44962436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1009,6 +1010,7 @@ MonoBehaviour:
   playerHP: 5
   enemy: {fileID: 1213174376}
   shield: {fileID: 1556555767}
+  enemyCollider: {fileID: 0}
   isPlayerDead: 0
   isShielded: 0
 --- !u!50 &1190096951
@@ -1184,6 +1186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 10}
   enemyHP: 4
+  canCollide: 1
 --- !u!1 &1315951501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,7 +1559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618553210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.05, y: -0.54, z: 0}
+  m_LocalPosition: {x: 7.89, y: -0.51, z: 0}
   m_LocalScale: {x: 6.2878404, y: 0.44962436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

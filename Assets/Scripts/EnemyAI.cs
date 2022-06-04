@@ -8,6 +8,8 @@ public class EnemyAI : MonoBehaviour
 
     public Vector2 velocity;
     public float enemyHP;
+
+    public bool canCollide = true;
     void Start()
     {
         enabled = false;
