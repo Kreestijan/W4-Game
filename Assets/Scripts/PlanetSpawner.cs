@@ -21,13 +21,11 @@ public class PlanetSpawner : MonoBehaviour
 
     private IEnumerator SpawnPlanets()
     {
-        if (GameObject.FindWithTag("Player") != null)
-        {
-            while (Player.instance.isPlayerDead == false)
+            while (GameObject.FindWithTag("Player") != null)
             {
 
                 chance = Random.value;
-
+                
 
                 if (chance > 0.40f)
                 {
@@ -42,7 +40,6 @@ public class PlanetSpawner : MonoBehaviour
 
                 yield return new WaitForSeconds(25f);
             }
-        }
     }
     
 }//class
