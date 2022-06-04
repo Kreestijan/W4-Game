@@ -24,9 +24,16 @@ public class Player : MonoBehaviour
     EnemyAI enemyAI;
     [SerializeField] GameObject enemy;
 
+    PowerUps shieldRef;
+    [SerializeField] GameObject shield;
+
     private Rigidbody2D playerBody;
 
     [HideInInspector] public bool isPlayerDead = false;
+
+    [SerializeField] bool isShielded = false;
+
+    //insert more powerups attributes here (bool preferably)
 
     private void Awake()
     {
@@ -36,6 +43,7 @@ public class Player : MonoBehaviour
 
         playerBody = GetComponent<Rigidbody2D>();
         enemyAI = enemy.GetComponent<EnemyAI>();
+        shieldRef = shield.GetComponent<PowerUps>();
     }
 
     private void Start()
@@ -66,29 +74,44 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         
-       Debug.Log(playerHP);
-       Debug.Log(enemyAI.enemyHP);
+        Debug.Log(playerHP);
+        Debug.Log(enemyAI.enemyHP);
+        Debug.Log(shieldRef.isSpawned);
 
-        if (collision.gameObject.tag.Equals("Enemy"))
+        if(collision.gameObject.CompareTag("Shield"))
         {
-
-            if (playerHP > enemyAI.enemyHP)
+            isShielded = true;
+            shieldRef.isSpawned = false;
+            Destroy(shieldRef.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if(isShielded == true)
             {
                 Destroy(enemyAI.gameObject);
+                isShielded = !isShielded;
             }
-
-            if (playerHP == enemyAI.enemyHP)
+            if(isShielded == false)
             {
-                Destroy(enemyAI.gameObject);
-                Destroy(this.gameObject);
+                if (playerHP > enemyAI.enemyHP)
+                {
+                    Destroy(enemyAI.gameObject);
+                }
+
+                if (playerHP == enemyAI.enemyHP)
+                {
+                    Destroy(enemyAI.gameObject);
+                    Destroy(this.gameObject);
+                }
+                if (playerHP < enemyAI.enemyHP)
+                    Destroy(this.gameObject);
+                playerHP -= enemyAI.enemyHP;
+                enemyAI.enemyHP -= enemyAI.enemyHP;
+                if (playerHP < 0) playerHP = 0;
             }
-            if (playerHP < enemyAI.enemyHP)
-                Destroy(this.gameObject);
 
         }
-        playerHP -= enemyAI.enemyHP;
-        enemyAI.enemyHP -= enemyAI.enemyHP;
-        if (playerHP < 0) playerHP = 0;
+        
         // Debug.Log(playerHP);
         // Debug.Log(enemyAI.enemyHP);
     }

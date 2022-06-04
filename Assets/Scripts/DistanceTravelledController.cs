@@ -23,7 +23,7 @@ public class DistanceTravelledController : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateDistance();
-        Debug.Log(Player.instance.distanceTraveled);
+        //Debug.Log(Player.instance.distanceTraveled);
     }
 
     public void UpdateDistance()
