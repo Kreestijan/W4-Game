@@ -17,10 +17,14 @@ public class ShipPropulsionAnimator : NetworkBehaviour
     }
 
     private void Update()
-{
-        if (!IsOwner) return;
-        
-        PlayerAnimation();
+    {
+        if (!IsOffline)
+        {
+            if (!IsOwner) return;
+
+            PlayerAnimation();
+        }
+        else PlayerAnimation();
     }
 
     void PlayerAnimation()
@@ -35,4 +39,4 @@ public class ShipPropulsionAnimator : NetworkBehaviour
         }
     }
     
-}//clas
+}//class

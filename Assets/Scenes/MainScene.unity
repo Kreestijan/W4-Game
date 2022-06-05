@@ -842,6 +842,7 @@ GameObject:
   - component: {fileID: 1190096950}
   - component: {fileID: 1190096952}
   - component: {fileID: 1190096951}
+  - component: {fileID: 1190096953}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -930,6 +931,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1190096953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190096948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _networkBehaviours:
+  - {fileID: 1755598891}
+  SceneTransformProperties:
+    Position: {x: 0, y: -3.5, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
+  _isNetworked: 0
+  _hasParentNetworkObjectAtEdit: 0
+  NetworkObserver: {fileID: 0}
+  _prefabId: -1
+  _scenePathHash: 83102251
+  _sceneId: 356921453831365214
+  _sceneNetworkObjects:
+  - {fileID: 1190096953}
 --- !u!1 &1213174376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fc4a18649866e42adf1c256048ec50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 0
+  _addedNetworkObject: {fileID: 1190096953}
+  _networkObjectCache: {fileID: 1190096953}
 --- !u!61 &1755598892
 BoxCollider2D:
   m_ObjectHideFlags: 0

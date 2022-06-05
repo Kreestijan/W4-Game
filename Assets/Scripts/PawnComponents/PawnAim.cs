@@ -11,12 +11,14 @@ public class PawnAim : NetworkBehaviour
     private Vector3 mousePosition;
     private Vector3 aimDirection;
 
-    private float rotationSpeed = 810f;
+    private float rotationSpeed = 900f;
 
 
     private void Update()
     {
         if(!IsOwner) return;
+        
+
         mousePosition = UtilsClass.GetMouseWorldPosition();
 
         aimDirection = (mousePosition - transform.position).normalized;
