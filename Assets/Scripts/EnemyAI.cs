@@ -24,8 +24,6 @@ public class EnemyAI : MonoBehaviour
         position.y -= velocity.y * Time.deltaTime;
         transform.localPosition = position;
     }
-
-    
     void Update()
     {
         UpdateEnemyPosition();
