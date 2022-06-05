@@ -37,6 +37,9 @@ public class PlanetSpawner : MonoBehaviour
 
                     spawnedPlanet = Instantiate(planetReference[randomIndex]);
 
+                    float randomScaleValue = Random.value;
+                    spawnedPlanet.transform.localScale = new Vector3(randomScaleValue, randomScaleValue, 1);
+
                     spawnedPlanet.transform.position = target;
                 }
 
