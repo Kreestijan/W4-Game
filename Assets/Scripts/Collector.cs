@@ -21,5 +21,13 @@ public class Collector : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Shield"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

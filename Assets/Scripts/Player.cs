@@ -24,9 +24,16 @@ public class Player : MonoBehaviour
     EnemyAI enemyAI;
     [SerializeField] GameObject enemy;
 
+    PowerUps shieldRef;
+    [SerializeField] GameObject shield;
+
     private Rigidbody2D playerBody;
 
     [HideInInspector] public bool isPlayerDead = false;
+
+    [SerializeField] bool isShielded = false;
+
+    //insert more powerups attributes here (bool preferably)
 
     private void Awake()
     {
@@ -36,6 +43,7 @@ public class Player : MonoBehaviour
 
         playerBody = GetComponent<Rigidbody2D>();
         enemyAI = enemy.GetComponent<EnemyAI>();
+        shieldRef = shield.GetComponent<PowerUps>();
     }
 
     private void Start()
@@ -65,32 +73,53 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
-       Debug.Log(playerHP);
-       Debug.Log(enemyAI.enemyHP);
-
-        if (collision.gameObject.tag.Equals("Enemy"))
+        if (enemyAI != null)
         {
-
-            if (playerHP > enemyAI.enemyHP)
+            if (collision.gameObject.CompareTag("Shield"))
             {
-                Destroy(enemyAI.gameObject);
-            }
+                isShielded = true;
+                shieldRef.isSpawned = false;
 
-            if (playerHP == enemyAI.enemyHP)
+                Destroy(shieldRef.gameObject);
+            }
+            if (collision.gameObject.CompareTag("Enemy"))
             {
-                Destroy(enemyAI.gameObject);
-                Destroy(this.gameObject);
-            }
-            if (playerHP < enemyAI.enemyHP)
-                Destroy(this.gameObject);
+                
+                if (isShielded == true)
+                {
+                    enemyAI.canCollide=false;
+                    
+                    isShielded = !isShielded;
+                }
 
+
+                else
+                {
+                    if (playerHP > enemyAI.enemyHP)
+                    {
+                        enemyAI.canCollide=false;
+                        playerHP -= enemyAI.enemyHP;
+                        enemyAI.enemyHP -= enemyAI.enemyHP;
+                    }
+                    if (playerHP <= enemyAI.enemyHP)
+                    {
+                        Destroy(this.gameObject);
+                        
+                        playerHP -= enemyAI.enemyHP;
+                        enemyAI.enemyHP -= enemyAI.enemyHP;
+                        playerHP = 0;
+                    }
+
+                }
+
+                if(enemyAI.canCollide == false)
+                    Destroy(enemyAI.gameObject);
+
+            }
+            Debug.Log(playerHP);
+            Debug.Log(enemyAI.enemyHP);
+            Debug.Log(isShielded);
         }
-        playerHP -= enemyAI.enemyHP;
-        enemyAI.enemyHP -= enemyAI.enemyHP;
-        if (playerHP < 0) playerHP = 0;
-        // Debug.Log(playerHP);
-        // Debug.Log(enemyAI.enemyHP);
     }
 
     void Operatii()//Citire tag-uri
