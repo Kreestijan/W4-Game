@@ -2106,6 +2106,7 @@ MonoBehaviour:
   - {fileID: 902514844}
   - {fileID: 1536084050}
   spawnerCTRL: {fileID: 2130841886}
+  mainShip: {fileID: 0}
 --- !u!1 &1213174376
 GameObject:
   m_ObjectHideFlags: 0

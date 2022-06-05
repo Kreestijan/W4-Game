@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gates : MonoBehaviour
+public class Gates_Spawner : MonoBehaviour
 {
-    public int Value;
+    public GameObject gates;
+
     // Start is called before the first frame update
     void Start()
     {
-        Randomm(1, 12);
         
     }
 
@@ -18,10 +18,4 @@ public class Gates : MonoBehaviour
         
     }
     
-    public int Randomm(int a, int b)
-    {
-       
-        Value = Random.Range(a, b);
-        return Value;
-    }
 }
