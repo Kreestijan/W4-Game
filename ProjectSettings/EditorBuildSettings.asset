@@ -18,4 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/BattleRoyale.unity
     guid: 55ea9403dea3caf409aa5e5b605eb06c
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 5fa0636efc581454982919eb0e97aa9d, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: e9004ba530a6d164fa66ad24e9b1d672, type: 2}

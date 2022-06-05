@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using FishNet.Object;
 
-public class ShipPropulsionAnimator : MonoBehaviour
+public class ShipPropulsionAnimator : NetworkBehaviour
 {
     private readonly string turboAnimation = "isTurboON";
 
@@ -17,8 +16,10 @@ public class ShipPropulsionAnimator : MonoBehaviour
         animator.SetBool(turboAnimation, false);
     }
 
-    private void FixedUpdate()
-    {
+    private void Update()
+{
+        if (!IsOwner) return;
+        
         PlayerAnimation();
     }
 
