@@ -1,3 +1,4 @@
+using CodeMonkey.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed = 20f;
 
     [SerializeField] private float scrollSpeed = 3f;
 
@@ -27,6 +28,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D playerBody;
 
     [HideInInspector] public bool isPlayerDead = false;
+
+    private Vector3 mousePosition;
+    private Vector3 aimDirection;
 
     private void Awake()
     {
@@ -60,7 +64,14 @@ public class Player : MonoBehaviour
 
     private void MovePlayer()
     {
+        mousePosition = UtilsClass.GetMouseWorldPosition();
+
+        aimDirection = (mousePosition - transform.position).normalized;
+
+
+
         playerBody.velocity = new Vector2(movementX * moveSpeed, scrollSpeed);
+        //playerBody.velocity = new Vector2(aimDirection.x * moveSpeed, scrollSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

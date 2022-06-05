@@ -878,7 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0576ad4274ca624ba01c1260cae8bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeedKeyboardControl: 10
+  moveSpeedMouseControl: 20
   scrollSpeed: 3
   distanceTraveled: 0
   playerHP: 5
@@ -904,7 +905,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1190096952
 BoxCollider2D:
   m_ObjectHideFlags: 0
