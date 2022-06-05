@@ -92,15 +92,53 @@ public class Trigger_Spawn : MonoBehaviour
                     break;
                 }
         }*/
-        if (currentShips >0)
+        if (currentShips >=0)
         {
-            foreach (int i in Enumerable.Range(0, demo.Value))
+            int contor = currentShips;
+            Debug.Log("Contorul este==== " + contor);
+            int dif = currentShips - contor;
+            Debug.Log("Diferenta este==== " + dif);
+            if(dif==0)
             {
-                controller[i].SetActive(true);
+                foreach (int i in Enumerable.Range(0, currentShips))
+                {
+                    Debug.Log("=");
+                    controller[i].SetActive(true);
+
+                }
+
             }
+            else if(dif<0)
+            {
+                foreach (int i in Enumerable.Range(0, dif))
+                {
+                    Debug.Log("<");
+                    controller[i].SetActive(true);
+
+                }
+            }
+
+            else if(dif>0)
+            {
+
+                foreach (int i in Enumerable.Range(0, dif))
+                {
+                    Debug.Log(">");
+                    controller[i].SetActive(false);
+
+                }
+            }
+            /*if (currentShips <= maxAppearShips)
+                foreach (int i in Enumerable.Range(0, demo.Value))
+                {
+
+                    controller[i].SetActive(true);
+
+                }*/
+            
         }
 
-        else if (currentShips> 0 && currentShips < 15)
+        /*else if (currentShips> 0 && currentShips < 15)
         {
             int dif = currentShips-maxAppearShips  ;
 
@@ -111,7 +149,7 @@ public class Trigger_Spawn : MonoBehaviour
             foreach (int i in Enumerable.Range(0, dif))
             {
               controller[i].SetActive(false);
-            }
+            }*/
                 /*foreach (int i in Enumerable.Range(0, currentShips))
                 {
                     controller[i].SetActive(false);
@@ -144,4 +182,4 @@ public class Trigger_Spawn : MonoBehaviour
         }*/
 
     }
-}
+
