@@ -38,13 +38,13 @@ public class Trigger_Spawn : MonoBehaviour
                     totalShips += demo.Value;
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
-                    //Debug.Log(" current ships are ======" + totalShips);
+                    Debug.Log(" total ships are ======" + totalShips);
                     Debug.Log(" current activeShips is ======" + activeShips);
                     //Debug.Log(" TRIGGER () current contor is ======" + activeShips);
                     foreach (int i in Enumerable.Range(0, activeShips))
                         controller[i].SetActive(true);
-                        
-                    
+
+                    Destroy(collision.gameObject);
                     break;
                 }
 
@@ -56,12 +56,13 @@ public class Trigger_Spawn : MonoBehaviour
                     totalShips -= demo.Value;
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
+                    Debug.Log(" total ships are ======" + totalShips);
                     Debug.Log(" current activeShips is ======" + activeShips);
                     foreach (int i in Enumerable.Range(0, 15))
                         controller[i].SetActive(false);
                     foreach (int i in Enumerable.Range(0, activeShips))
                         controller[i].SetActive(true);
-                    
+                    Destroy(collision.gameObject);
                     break;
 
                 }
