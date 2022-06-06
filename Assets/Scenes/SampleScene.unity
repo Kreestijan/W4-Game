@@ -233,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36589906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.72, y: 6, z: 11}
+  m_LocalPosition: {x: 4.8, y: 6, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,7 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32751ee9c722da46a5fa2bc5c6e6711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gateReference: []
+  gateReference:
+  - {fileID: 4564615239214637339, guid: bc0d8f4260386774bb29340eccea9c64, type: 3}
+  - {fileID: 7276405048000180054, guid: 01e808658dd5e864eaa991796da4db7b, type: 3}
 --- !u!1 &122850455
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,8 +563,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304284363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.249586, y: -1.3974307, z: 0.07220401}
-  m_LocalScale: {x: 6.2878404, y: 0.44962436, z: 1}
+  m_LocalPosition: {x: 5.38, y: -1.3974307, z: 0.07220401}
+  m_LocalScale: {x: 9.600048, y: 0.44962436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1346581730}
@@ -649,7 +651,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.27137503, b: 0.9245283, a: 0.6117647}
+  m_Color: {r: 0.9254902, g: 0.0894169, b: 0, a: 0.6117647}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1838,8 +1840,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145164447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9904141, y: -1.3974307, z: 0.07220401}
-  m_LocalScale: {x: 6.2878404, y: 0.44962436, z: 1}
+  m_LocalPosition: {x: -4.22, y: -1.3974307, z: 0.07220401}
+  m_LocalScale: {x: 9.600048, y: 0.44962436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1346581730}
@@ -2168,7 +2170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307054248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.46, y: 6, z: 11}
+  m_LocalPosition: {x: -4.8, y: 6, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
