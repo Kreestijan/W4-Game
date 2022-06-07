@@ -21,13 +21,11 @@ public class PlanetSpawner : MonoBehaviour
 
     private IEnumerator SpawnPlanets()
     {
-        if (GameObject.FindWithTag("Player") != null)
-        {
-            while (Player.instance.isPlayerDead == false)
+            while (GameObject.FindWithTag("Player") != null)
             {
 
                 chance = Random.value;
-
+                
 
                 if (chance > 0.40f)
                 {
@@ -37,12 +35,14 @@ public class PlanetSpawner : MonoBehaviour
 
                     spawnedPlanet = Instantiate(planetReference[randomIndex]);
 
+                    float randomScaleValue = Random.value;
+                    spawnedPlanet.transform.localScale = new Vector3(randomScaleValue, randomScaleValue, 1);
+
                     spawnedPlanet.transform.position = target;
                 }
 
                 yield return new WaitForSeconds(25f);
             }
-        }
     }
     
 }//class

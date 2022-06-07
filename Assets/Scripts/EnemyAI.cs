@@ -8,6 +8,8 @@ public class EnemyAI : MonoBehaviour
 
     public Vector2 velocity;
     public float enemyHP;
+
+    public bool canCollide = true;
     void Start()
     {
         enabled = false;
@@ -22,8 +24,6 @@ public class EnemyAI : MonoBehaviour
         position.y -= velocity.y * Time.deltaTime;
         transform.localPosition = position;
     }
-
-    
     void Update()
     {
         UpdateEnemyPosition();
