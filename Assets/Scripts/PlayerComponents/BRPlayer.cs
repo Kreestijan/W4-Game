@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
@@ -7,6 +5,9 @@ using UnityEngine.AddressableAssets;
 
 public sealed class BRPlayer : NetworkBehaviour
 {
+
+    public static BRPlayer Instance { get; private set; }
+
     [SyncVar] public string nickname;
 
     [SyncVar] public bool isReady;
@@ -27,6 +28,14 @@ public sealed class BRPlayer : NetworkBehaviour
         GameManager.Instance.players.Remove(this);
     }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        if (!IsOwner) return;
+
+        Instance = this; 
+    }
+
     private void Update()
     {
         if (!IsOwner) return;
@@ -39,26 +48,31 @@ public sealed class BRPlayer : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            ServerSpawnPawn();
+            
         }
 
     }
 
-    [ServerRpc] 
-    public void ServerSetIsReady(bool value)
-    {
-        isReady = value;
-    }
-
-    [ServerRpc]
-    private void ServerSpawnPawn()
+    public void StartGame()
     {
         GameObject pawnPrefab = Addressables.LoadAssetAsync<GameObject>("Pawn").WaitForCompletion();
         GameObject pawnInstance = Instantiate(pawnPrefab);
 
         Spawn(pawnInstance, Owner);
+
+        controlledPawn = pawnInstance.GetComponent<Pawn>();
+    }
+    
+    public void StopGame()
+    {
+        if (controlledPawn != null && controlledPawn.IsSpawned) controlledPawn.Despawn();
     }
 
+    [ServerRpc(RequireOwnership = false)] 
+    public void ServerSetIsReady(bool value)
+    {
+        isReady = value;
+    }
 
 
 }//class

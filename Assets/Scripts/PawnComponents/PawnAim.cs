@@ -5,8 +5,7 @@ using CodeMonkey.Utils;
 using FishNet.Object;
 
 public class PawnAim : NetworkBehaviour
-{
-
+{   
     private Vector2 directionOfRotation;
     private Vector3 mousePosition;
     private Vector3 aimDirection;
