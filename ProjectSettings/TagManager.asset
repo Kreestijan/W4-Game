@@ -15,6 +15,7 @@ TagManager:
   - Planet
   - Collector
   - PlayerCounter
+  - Shield
   layers:
   - Default
   - TransparentFX
