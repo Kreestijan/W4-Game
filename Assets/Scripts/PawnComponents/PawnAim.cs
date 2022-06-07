@@ -6,9 +6,9 @@ using FishNet.Object;
 
 public class PawnAim : NetworkBehaviour
 {   
-    private Vector2 directionOfRotation;
+    [HideInInspector] public Vector2 directionOfRotation;
     private Vector3 mousePosition;
-    private Vector3 aimDirection;
+    [HideInInspector] public Vector3 aimDirection;
 
     private float rotationSpeed = 900f;
 

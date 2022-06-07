@@ -6,8 +6,6 @@ TagManager:
   tags:
   - PlayerAppendix
   - ScreenEdge
-  - EdgeLeft
-  - EdgeRight
   - Enemy
   - Planet
   - Collector
@@ -15,6 +13,9 @@ TagManager:
   - '-'
   - +
   - Shield
+  - + 2
+  - + 5
+  - Pawn
   layers:
   - Default
   - TransparentFX

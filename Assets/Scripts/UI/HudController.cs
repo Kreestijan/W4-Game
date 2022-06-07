@@ -7,8 +7,9 @@ using FishNet.Object.Synchronizing;
 
 public sealed class HudController : NetworkBehaviour
 {
-    [SerializeField]
-    private Text playerCountText;
+    [SerializeField] private Text playerCountText;
+    
+    [SerializeField] private Text alivePlayersCountText;
 
     private void Update()
     {
@@ -32,4 +33,17 @@ public sealed class HudController : NetworkBehaviour
     {
         playerCountText.text = $"Online Players: {playerCount}";
     }
-}
+
+    [ServerRpc]
+    private void ServerUpdateAlivePlayersCountText()
+    {
+
+    }
+
+    [ObserversRpc]
+    private void ObserversUpdateAlivePlayersCountText(int alivePlayerCount)
+    {
+
+    }
+    
+}//class

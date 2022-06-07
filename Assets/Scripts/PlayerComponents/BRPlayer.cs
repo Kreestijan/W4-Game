@@ -2,6 +2,7 @@ using UnityEngine;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine.AddressableAssets;
+using FishNet.Connection;
 
 public sealed class BRPlayer : NetworkBehaviour
 {
@@ -12,7 +13,11 @@ public sealed class BRPlayer : NetworkBehaviour
 
     [SyncVar] public bool isReady;
 
+    [SyncVar] public bool isAlive;
+
     [SyncVar] public Pawn controlledPawn;
+
+    
 
     public override void OnStartServer()
     {
@@ -33,7 +38,11 @@ public sealed class BRPlayer : NetworkBehaviour
         base.OnStartClient();
         if (!IsOwner) return;
 
-        Instance = this; 
+        Instance = this;
+
+        UIManager.Instance.Initialize();
+
+        UIManager.Instance.Show<LobbyView>();
     }
 
     private void Update()
@@ -46,11 +55,6 @@ public sealed class BRPlayer : NetworkBehaviour
             Debug.Log("You've pressed R!");
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            
-        }
-
     }
 
     public void StartGame()
@@ -61,6 +65,8 @@ public sealed class BRPlayer : NetworkBehaviour
         Spawn(pawnInstance, Owner);
 
         controlledPawn = pawnInstance.GetComponent<Pawn>();
+
+        TargetPawnSpawned(Owner);
     }
     
     public void StopGame()
@@ -72,6 +78,12 @@ public sealed class BRPlayer : NetworkBehaviour
     public void ServerSetIsReady(bool value)
     {
         isReady = value;
+    }
+
+    [TargetRpc]
+    private void TargetPawnSpawned(NetworkConnection networkConnection)
+    {
+        UIManager.Instance.Show<MainView>();
     }
 
 

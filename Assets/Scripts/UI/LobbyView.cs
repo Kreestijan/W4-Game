@@ -1,10 +1,8 @@
 using FishNet;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public sealed class LobbyView : MonoBehaviour
+public sealed class LobbyView : View
 {
     [SerializeField] private Button toggleReady;
 
@@ -12,9 +10,9 @@ public sealed class LobbyView : MonoBehaviour
     
     [SerializeField] private Button startGame;
 
+    [SerializeField] private Text startGameText;
 
-    private bool _initialized;
-    public void Initialize()
+    public override void Initialize()
     {
         toggleReady.onClick.AddListener(() => BRPlayer.Instance.ServerSetIsReady(!BRPlayer.Instance.isReady));
 
@@ -25,15 +23,19 @@ public sealed class LobbyView : MonoBehaviour
         }
         else startGame.gameObject.SetActive(false);
 
-        _initialized = true;
+        base.Initialize();
+
     }
 
     private void Update()
     {
-        if (!_initialized) return;
+        if (!Initialized) return;
 
         toggleReadyText.color = BRPlayer.Instance.isReady ? Color.green : Color.red;
 
         startGame.interactable = GameManager.Instance.canStart;
+
+        startGameText.color = startGame.interactable ? Color.white : Color.gray;
+        
     }
 }
