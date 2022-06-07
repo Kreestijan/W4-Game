@@ -22,9 +22,11 @@ public class Trigger_Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-       
+        
+
+
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string TAG = collision.gameObject.tag;
@@ -69,36 +71,5 @@ public class Trigger_Spawn : MonoBehaviour
         }
     }
     
-    /*void Check()
-    {
-
-        if(totalShips>0)
-        {
-            // activeShips = totalShips;
-             int dif = totalShips - activeShips;
-            Debug.Log(" current ships are ======" + dif);
-            Debug.Log(" current contor is ======" + activeShips);
-
-
-            if (totalShips>15)
-            {
-                foreach (int i in Enumerable.Range(0, activeShips-1))
-                    controller[i].SetActive(true);
-            }
-            else if(totalShips<=15)
-            {
-                Mathf.Abs(dif);
-                foreach (int i in Enumerable.Range(0, activeShips-1))
-                    controller[i].SetActive(true);
-                Debug.Log("DIF=====" + dif);
-                    controller[dif].SetActive(false);
-            }
-            
-        }
-        else if (totalShips <= 0)
-        {
-            spawnerCTRL.SetActive(false);
-            mainShip.SetActive(false);
-        }
-    }*/
+    
 }
