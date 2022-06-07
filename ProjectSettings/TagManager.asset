@@ -9,12 +9,11 @@ TagManager:
   - EdgeLeft
   - EdgeRight
   - Enemy
-  - + 2
-  - + 10
-  - + 5
   - Planet
   - Collector
-  - Shield
+  - Undefined
+  - '-'
+  - +
   layers:
   - Default
   - TransparentFX
@@ -22,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
