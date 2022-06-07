@@ -132,43 +132,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Operatii()//Citire tag-uri
-    {
-        
-        char[] spearator = { ' ' };
-
-        // using the method
-        String[] strlist = gateOperation.Split(spearator);
-
-        foreach (String s in strlist)
-        {
-            Debug.Log("The elements are : \n" + s);
-        }
-        Debug.Log(strlist[1]);//al doilea element pentru instantiere
-
-
-        if (strlist[0] == "+")//Instantiere playerobject
-        {
-            for (var i = 0; i <= Int16.Parse(strlist[1]); i++)
-                Instantiate(playerBody);
-
-        }
-        //continuare pentru scadere, impartire samd...
-
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)//Trigger pentru Gate-uri
-
-    {
-        gateOperation = collision.gameObject.tag;
-        Debug.Log(collision.gameObject.tag);
-        Destroy(collision.gameObject);
-        gateOperation = collision.gameObject.tag;
-        Debug.Log(gateOperation.GetType());
-        Operatii();
-    }
     
+
+    
+
     private void GetDistanceTraveled()
     {
         distanceTraveled = transform.position.y - startingPositionY;
