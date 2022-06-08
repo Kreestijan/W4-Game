@@ -1,6 +1,7 @@
 using UnityEngine;
 using FishNet.Object;
-using System.IO.Pipes;
+using FishNet.Object.Synchronizing;
+using UnityEngine.AddressableAssets;
 
 public sealed class PawnWeapon : NetworkBehaviour
 {
@@ -14,13 +15,16 @@ public sealed class PawnWeapon : NetworkBehaviour
     [SerializeField] private float maxDamage;
     [SerializeField] private float projectileSpeed;
 
+    private Rigidbody2D laserBody;
+
     private float damage;
 
     [SerializeField] private Transform firePoint;
 
-    private Vector2 shootingDirection;
+    [SyncVar] private Vector2 shootingDirection;
 
     [SerializeField] private GameObject laserPrefab;
+
 
     public override void OnStartNetwork()
     {
@@ -31,7 +35,6 @@ public sealed class PawnWeapon : NetworkBehaviour
         _input = GetComponent<PawnInput>();
 
         _aim = GetComponent<PawnAim>();
-        
 
     }
 
@@ -56,11 +59,22 @@ public sealed class PawnWeapon : NetworkBehaviour
      
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void ServerFire()
     {
-        GameObject laserBeam = Instantiate(laserPrefab, firePoint.position, Quaternion.LookRotation(Vector3.forward, _aim.directionOfRotation));
-        laserBeam.GetComponent<Rigidbody2D>().velocity = shootingDirection * projectileSpeed;
+        GameObject laserBeamInstance = Instantiate(laserPrefab, firePoint.position, Quaternion.LookRotation(Vector3.forward, _aim.directionOfRotation));
+
+        Spawn(laserBeamInstance, Owner);
+
+        laserBody = laserBeamInstance.GetComponent<Rigidbody2D>();
+
+        laserBody.velocity = shootingDirection * projectileSpeed;
+    }
+
+    [ObserversRpc]
+    private void ObserverFire()
+    {
+
     }
 
 }//class

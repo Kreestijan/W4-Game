@@ -16,6 +16,7 @@ TagManager:
   - + 2
   - + 5
   - Pawn
+  - LaserBeam
   layers:
   - Default
   - TransparentFX
