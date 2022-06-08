@@ -15,8 +15,7 @@ public class Ships_GUI : MonoBehaviour
     void Start()
     {
         no_ships = script.totalShips;
-        Debug.Log("no_ships is "+no_ships);
-        txt.text = "Score : " + no_ships;
+        txt.text = ":" + no_ships;
         
     }
 
