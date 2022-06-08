@@ -46,7 +46,8 @@ public class Trigger_Spawn : MonoBehaviour
                     foreach (int i in Enumerable.Range(0, activeShips))
                         controller[i].SetActive(true);
 
-                    Destroy(collision.gameObject);
+                    Destroy(GameObject.FindGameObjectWithTag("+"));
+                    Destroy(GameObject.FindGameObjectWithTag("-"));
                     break;
                 }
 
@@ -64,7 +65,8 @@ public class Trigger_Spawn : MonoBehaviour
                         controller[i].SetActive(false);
                     foreach (int i in Enumerable.Range(0, activeShips))
                         controller[i].SetActive(true);
-                    Destroy(collision.gameObject);
+                    Destroy(GameObject.FindGameObjectWithTag("+"));
+                    Destroy(GameObject.FindGameObjectWithTag("-"));
                     break;
 
                 }
