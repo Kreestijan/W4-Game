@@ -12,7 +12,6 @@ public class PawnAim : NetworkBehaviour
 
     private float rotationSpeed = 900f;
 
-
     private void Update()
     {
         if(!IsOwner) return;

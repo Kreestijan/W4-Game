@@ -194,12 +194,11 @@ MonoBehaviour:
   _componentIndexCache: 4
   _addedNetworkObject: {fileID: 4683248696927807984}
   _networkObjectCache: {fileID: 4683248696927807984}
+  projectilePrefab: {fileID: 1196080161882782251, guid: 5acc3dc71913de141989f1f2c6f3ee0a, type: 3}
+  firePoint: {fileID: 6215806542748147833}
   minDamage: 3
   maxDamage: 9
   projectileSpeed: 10
-  shotDelay: 1
-  firePoint: {fileID: 6215806542748147833}
-  laserPrefab: {fileID: 1196080161882782251, guid: 5acc3dc71913de141989f1f2c6f3ee0a, type: 3}
 --- !u!114 &4683248696927807984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +283,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0016409159, y: 0.04266447}
