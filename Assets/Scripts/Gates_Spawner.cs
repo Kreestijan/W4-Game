@@ -6,13 +6,13 @@ public class Gates_Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] gateReference;
 
-    private GameObject gateSpawned;
-
+    private GameObject gateSpawned1;
+    private GameObject gateSpawned2;
     private int randomIndex;
     private double chance;
 
-    private Vector2 target;
-
+    private Vector2 target1;
+    private Vector2 target2;
     void Start()
     {
         StartCoroutine(SpawnGates());
@@ -25,34 +25,42 @@ public class Gates_Spawner : MonoBehaviour
             while (Player.instance.isPlayerDead == false)
             {
 
-                chance = Random.Range(0,2);
+                chance = Random.Range(0, 2);
 
 
                 if (chance == 0)
                 {
-                    target = new Vector2(this.transform.position.x, this.transform.position.y);
+                    Debug.Log("chance0");
+                    target1 = new Vector2(this.transform.position.x - 4.8f, this.transform.position.y);
+                    target2 = new Vector2(this.transform.position.x + 4.8f, this.transform.position.y);
 
                     //randomIndex = Random.Range(0, gateReference.Length);
 
-                    gateSpawned = Instantiate(gateReference[0]);
+                    gateSpawned1 = Instantiate(gateReference[0]);
+                    gateSpawned2 = Instantiate(gateReference[1]);
+                    gateSpawned1.transform.position = target1;
+                    gateSpawned2.transform.position = target2;
 
-                    gateSpawned.transform.position = target;
+
                 }
-                else if(chance==1)
+                else if (chance == 1)
                 {
-                    target = new Vector2(this.transform.position.x, this.transform.position.y);
+                    Debug.Log("chance1");
+                    target1 = new Vector2(this.transform.position.x - 4.8f, this.transform.position.y);
+                    target2 = new Vector2(this.transform.position.x + 4.8f, this.transform.position.y);
 
                     //randomIndex = Random.Range(0, gateReference.Length);
 
-                    gateSpawned = Instantiate(gateReference[1]);
-
-                    gateSpawned.transform.position = target;
+                    gateSpawned1 = Instantiate(gateReference[1]);
+                    gateSpawned2 = Instantiate(gateReference[0]);
+                    gateSpawned1.transform.position = target1;
+                    gateSpawned2.transform.position = target2;
                 }
                 yield return new WaitForSeconds(5f);
             }
         }
     }
-
-
-
 }
+
+
+

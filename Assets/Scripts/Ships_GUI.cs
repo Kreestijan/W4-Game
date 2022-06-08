@@ -8,12 +8,14 @@ public class Ships_GUI : MonoBehaviour
 
     public TextMeshProUGUI txt;
     private int no_ships=0;
-    private Trigger_Spawn Total_ships;
+    
+    public Trigger_Spawn script;
     
     // Start is called before the first frame update
     void Start()
     {
-
+        no_ships = script.totalShips;
+        Debug.Log("no_ships is "+no_ships);
         txt.text = "Score : " + no_ships;
         
     }
@@ -21,9 +23,10 @@ public class Ships_GUI : MonoBehaviour
     
     void Update()
     {
+        no_ships = script.totalShips;
         /*Total_ships = gameObject.GetComponent<Trigger_Spawn>();
-        //Tota
-        txt.text = "Score : " + no_ships;*/
+        //Tota*/
+        txt.text = ":"+no_ships;
         
     }
     

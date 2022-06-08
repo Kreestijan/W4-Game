@@ -7,7 +7,7 @@ public class Trigger_Spawn : MonoBehaviour
 
 {
     private Gates demo;
-    private int totalShips = 0;
+    public int totalShips = 0;
     [SerializeField] GameObject[] controller;
     [SerializeField] GameObject spawnerCTRL;
     [SerializeField] GameObject mainShip;
