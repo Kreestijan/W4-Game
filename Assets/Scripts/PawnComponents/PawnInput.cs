@@ -15,6 +15,8 @@ public sealed class PawnInput : NetworkBehaviour
 
     public bool turbo;
 
+    public bool fire;
+
 
     public override void OnStartNetwork()
     {
@@ -31,6 +33,11 @@ public sealed class PawnInput : NetworkBehaviour
         vertical = Input.GetAxis("Vertical");
         
         turbo = Input.GetButton("Jump");
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            fire = true;
+        }
 
     }
     

@@ -25,4 +25,28 @@ public sealed class GameManager : NetworkBehaviour
 
         Debug.Log($"Can start = {canStart}");
     }
-}
+
+    [Server]
+    public void StartGame()
+    {
+
+        if (!canStart) return;
+        
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].StartGame();
+
+        }
+    }
+
+    [Server]
+    public void StopGame()
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].StopGame();
+
+        }
+    }
+    
+}//class

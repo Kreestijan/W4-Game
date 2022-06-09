@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &257046014090858623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7936702062523813670}
+  m_Layer: 6
+  m_Name: FirepointRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7936702062523813670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257046014090858623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.215, y: 0.455, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4683248696927807986}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &386376731431992496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2723152708340632651}
+  m_Layer: 6
+  m_Name: FirepointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2723152708340632651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386376731431992496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.215, y: 0.455, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4683248696927807986}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4683248696927807991
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,9 +75,11 @@ GameObject:
   - component: {fileID: 682524126363543845}
   - component: {fileID: 611484222741308514}
   - component: {fileID: 4829369194900622408}
+  - component: {fileID: 2992924378335467139}
   - component: {fileID: 4683248696927807984}
-  - component: {fileID: 3364325164734436660}
   - component: {fileID: -3043427079015301915}
+  - component: {fileID: 4724495449535177925}
+  - component: {fileID: 4604193216400424914}
   m_Layer: 6
   m_Name: Pawn
   m_TagString: Untagged
@@ -31,11 +95,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4683248696927807991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.06, y: 0.114, z: 111.97362}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6811816164962930998}
+  - {fileID: 6215806542748147833}
+  - {fileID: 2723152708340632651}
+  - {fileID: 7936702062523813670}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,6 +144,7 @@ MonoBehaviour:
   mouseY: 0
   sensitivity: 0
   turbo: 0
+  fire: 0
 --- !u!114 &611484222741308514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +160,8 @@ MonoBehaviour:
   _componentIndexCache: 2
   _addedNetworkObject: {fileID: 4683248696927807984}
   _networkObjectCache: {fileID: 4683248696927807984}
+  directionOfRotation: {x: 0, y: 0}
+  aimDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &4829369194900622408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +178,27 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 4683248696927807984}
   _networkObjectCache: {fileID: 4683248696927807984}
   speed: 3
-  turboSpeed: 1.7
+  turboMultiplier: 1.5
+--- !u!114 &2992924378335467139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683248696927807991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f6b69dfdda1454d995614a34995dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 4
+  _addedNetworkObject: {fileID: 4683248696927807984}
+  _networkObjectCache: {fileID: 4683248696927807984}
+  projectilePrefab: {fileID: 1196080161882782251, guid: 5acc3dc71913de141989f1f2c6f3ee0a, type: 3}
+  firePoint: {fileID: 6215806542748147833}
+  minDamage: 3
+  maxDamage: 9
+  projectileSpeed: 10
 --- !u!114 &4683248696927807984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,10 +216,11 @@ MonoBehaviour:
   - {fileID: 682524126363543845}
   - {fileID: 611484222741308514}
   - {fileID: 4829369194900622408}
+  - {fileID: 2992924378335467139}
   - {fileID: -3043427079015301915}
   - {fileID: 3137033863226430963}
   SceneTransformProperties:
-    Position: {x: 4.06, y: 0.114, z: 111.97362}
+    Position: {x: 0, y: 0, z: 1}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
@@ -140,24 +231,6 @@ MonoBehaviour:
   _sceneId: 0
   _sceneNetworkObjects:
   - {fileID: 4683248696927807984}
---- !u!143 &3364325164734436660
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4683248696927807991}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.1
-  m_Radius: 0.4
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-3043427079015301915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
+  _componentIndexCache: 5
   _addedNetworkObject: {fileID: 4683248696927807984}
   _networkObjectCache: {fileID: 4683248696927807984}
   _synchronizeParent: 0
@@ -200,6 +273,74 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
+--- !u!70 &4724495449535177925
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683248696927807991}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0016409159, y: 0.04266447}
+  m_Size: {x: 0.76583314, y: 0.9606174}
+  m_Direction: 0
+--- !u!50 &4604193216400424914
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683248696927807991}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &6156729399329385104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6215806542748147833}
+  m_Layer: 6
+  m_Name: FirepointCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6215806542748147833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156729399329385104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4683248696927807986}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4683248695766231737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,12 +409,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: _addedNetworkObject
+      value: 
+      objectReference: {fileID: 4683248696927807984}
+    - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _networkObjectCache
       value: 
       objectReference: {fileID: 4683248696927807984}
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _componentIndexCache
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}

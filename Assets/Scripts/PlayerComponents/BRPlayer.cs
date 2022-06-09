@@ -1,17 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine.AddressableAssets;
+using FishNet.Connection;
 
 public sealed class BRPlayer : NetworkBehaviour
 {
+
+    public static BRPlayer Instance { get; private set; }
+
     [SyncVar] public string nickname;
 
     [SyncVar] public bool isReady;
 
+    [SyncVar] public bool isAlive;
+
     [SyncVar] public Pawn controlledPawn;
+
+    
 
     public override void OnStartServer()
     {
@@ -27,6 +33,18 @@ public sealed class BRPlayer : NetworkBehaviour
         GameManager.Instance.players.Remove(this);
     }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        if (!IsOwner) return;
+
+        Instance = this;
+
+        UIManager.Instance.Initialize();
+
+        UIManager.Instance.Show<LobbyView>();
+    }
+
     private void Update()
     {
         if (!IsOwner) return;
@@ -37,28 +55,36 @@ public sealed class BRPlayer : NetworkBehaviour
             Debug.Log("You've pressed R!");
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            ServerSpawnPawn();
-        }
-
     }
 
-    [ServerRpc] 
-    public void ServerSetIsReady(bool value)
-    {
-        isReady = value;
-    }
-
-    [ServerRpc]
-    private void ServerSpawnPawn()
+    public void StartGame()
     {
         GameObject pawnPrefab = Addressables.LoadAssetAsync<GameObject>("Pawn").WaitForCompletion();
         GameObject pawnInstance = Instantiate(pawnPrefab);
 
         Spawn(pawnInstance, Owner);
+
+        controlledPawn = pawnInstance.GetComponent<Pawn>();
+
+        TargetPawnSpawned(Owner);
+    }
+    
+    public void StopGame()
+    {
+        if (controlledPawn != null && controlledPawn.IsSpawned) controlledPawn.Despawn();
     }
 
+    [ServerRpc(RequireOwnership = false)] 
+    public void ServerSetIsReady(bool value)
+    {
+        isReady = value;
+    }
+
+    [TargetRpc]
+    private void TargetPawnSpawned(NetworkConnection networkConnection)
+    {
+        UIManager.Instance.Show<MainView>();
+    }
 
 
 }//class
