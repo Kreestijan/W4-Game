@@ -39,12 +39,13 @@ public class Trigger_Spawn : MonoBehaviour
                     demo = deer.GetComponent<Gates>();
                     
                     totalShips += demo.Value;
-
+                    totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
                     //Debug.Log(" TRIGGER () current contor is ======" + activeShips);
                     foreach (int i in Enumerable.Range(0, activeShips))
                     { controller[i].SetActive(true);
+                        //effects[i].GetComponent;
                         }
 
                     Destroy(GameObject.FindGameObjectWithTag("+"));
@@ -57,6 +58,7 @@ public class Trigger_Spawn : MonoBehaviour
                     GameObject deer = collision.gameObject;
                     demo = deer.GetComponent<Gates>();
                     totalShips -= demo.Value;
+                    totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
                     foreach (int i in Enumerable.Range(0, 15))

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 9618016}
   - component: {fileID: 9618017}
   m_Layer: 0
-  m_Name: Square (5)
+  m_Name: Ship 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,13 +149,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9618014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -1.15, z: 0}
+  m_LocalPosition: {x: 0.7, y: -1.42, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 907435615}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 5
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9618016
 SpriteRenderer:
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 157135172}
   - component: {fileID: 157135173}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Ship 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,13 +460,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157135170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -1.15, z: 0}
+  m_LocalPosition: {x: 0.02, y: -1.42, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1112179902}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 2
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &157135172
 SpriteRenderer:
@@ -694,7 +694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304284363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.38, y: -1.3974307, z: 0.07220401}
+  m_LocalPosition: {x: 5.38, y: 1.4099998, z: 0.07220401}
   m_LocalScale: {x: 9.600048, y: 0.44962436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 387778508}
   - component: {fileID: 387778509}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ship 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,13 +818,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387778506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: -0.582, z: 0}
+  m_LocalPosition: {x: 1.06, y: -0.852, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2021940876}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &387778508
 SpriteRenderer:
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 427220392}
   - component: {fileID: 427220393}
   m_Layer: 0
-  m_Name: Square (6)
+  m_Name: Ship 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -922,13 +922,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427220390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72, y: 0, z: 0}
+  m_LocalPosition: {x: 0.72, y: -0.26999998, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823915014}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &427220392
 SpriteRenderer:
@@ -1398,7 +1398,7 @@ GameObject:
   - component: {fileID: 531683769}
   - component: {fileID: 531683770}
   m_Layer: 0
-  m_Name: Square (9)
+  m_Name: Ship 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,13 +1412,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531683767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.49, y: -1.15, z: 0}
+  m_LocalPosition: {x: -1.49, y: -1.42, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2085934553}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 9
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &531683769
 SpriteRenderer:
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 533398023}
   - component: {fileID: 533398024}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Ship 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1516,13 +1516,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533398021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: -0.55, z: 0}
+  m_LocalPosition: {x: -1.15, y: -0.82, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1177212421}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &533398023
 SpriteRenderer:
@@ -1759,7 +1759,7 @@ GameObject:
   - component: {fileID: 644469702}
   - component: {fileID: 644469703}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: Ship 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,13 +1773,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644469700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.42, y: 0, z: 0}
+  m_LocalPosition: {x: 1.42, y: -0.26999998, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 465913173}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &644469702
 SpriteRenderer:
@@ -2131,7 +2131,7 @@ GameObject:
   - component: {fileID: 902514846}
   - component: {fileID: 902514847}
   m_Layer: 0
-  m_Name: Square (13)
+  m_Name: Ship 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2145,13 +2145,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902514844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.744, y: -0.601, z: 0}
+  m_LocalPosition: {x: 1.744, y: -0.871, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1002891137}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &902514846
 SpriteRenderer:
@@ -2266,7 +2266,7 @@ GameObject:
   - component: {fileID: 944448696}
   - component: {fileID: 944448697}
   m_Layer: 0
-  m_Name: Square (8)
+  m_Name: Ship 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2280,13 +2280,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944448694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.73, y: -1.15, z: 0}
+  m_LocalPosition: {x: -0.73, y: -1.42, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1527292485}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &944448696
 SpriteRenderer:
@@ -2564,7 +2564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.43
   ShootingRange: 10
-  bullet: {fileID: 7523029562009804356, guid: 8e97e639f285f6b4ea00e15e5efb7308, type: 3}
+  bullet: {fileID: 7732704597066306985, guid: 77341becacbb4e049b3aad3a305ed04d, type: 3}
   bulletInst: {fileID: 1657014532}
   nextShot: 0
   fireRate: 1
@@ -2722,7 +2722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145164447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.22, y: -1.3974307, z: 0.07220401}
+  m_LocalPosition: {x: -4.22, y: 1.41, z: 0.07220401}
   m_LocalScale: {x: 9.600048, y: 0.44962436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2859,7 +2859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190096948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.69, y: -2.66, z: 0}
+  m_LocalPosition: {x: -2.69, y: -1.999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2949,23 +2949,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalShips: 0
   controller:
-  - {fileID: 387778506}
-  - {fileID: 533398021}
-  - {fileID: 157135170}
-  - {fileID: 644469700}
-  - {fileID: 1629300846}
-  - {fileID: 9618014}
   - {fileID: 427220390}
+  - {fileID: 1629300846}
+  - {fileID: 644469700}
   - {fileID: 1859464397}
-  - {fileID: 944448694}
-  - {fileID: 531683767}
-  - {fileID: 1892737177}
   - {fileID: 1571913509}
   - {fileID: 1460537941}
+  - {fileID: 387778506}
+  - {fileID: 533398021}
   - {fileID: 902514844}
+  - {fileID: 1892737177}
+  - {fileID: 157135170}
+  - {fileID: 944448694}
+  - {fileID: 9618014}
   - {fileID: 1536084050}
+  - {fileID: 531683767}
   spawnerCTRL: {fileID: 2130841886}
   mainShip: {fileID: 1755598887}
+  effect: {fileID: 155548, guid: d50f5f5d5a171443fa76bc1f6fc90473, type: 3}
 --- !u!114 &1190096954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,7 +2982,7 @@ MonoBehaviour:
   _networkBehaviours:
   - {fileID: 1755598891}
   SceneTransformProperties:
-    Position: {x: -2.69, y: -2.66, z: 0}
+    Position: {x: -2.69, y: -1.999, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 0
@@ -3511,7 +3512,7 @@ GameObject:
   - component: {fileID: 1460537943}
   - component: {fileID: 1460537944}
   m_Layer: 0
-  m_Name: Square (12)
+  m_Name: Ship 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3525,13 +3526,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460537941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.397, y: -0.59, z: 0}
+  m_LocalPosition: {x: 0.397, y: -0.86, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1050884870}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1460537943
 SpriteRenderer:
@@ -3646,7 +3647,7 @@ GameObject:
   - component: {fileID: 1536084052}
   - component: {fileID: 1536084053}
   m_Layer: 0
-  m_Name: Square (14)
+  m_Name: Ship 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3660,13 +3661,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536084050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3699999, y: -1.1500001, z: 0}
+  m_LocalPosition: {x: 1.3699999, y: -1.4200001, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1165815691}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1536084052
 SpriteRenderer:
@@ -3750,7 +3751,7 @@ GameObject:
   - component: {fileID: 1571913511}
   - component: {fileID: 1571913512}
   m_Layer: 0
-  m_Name: Square (11)
+  m_Name: Ship 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3764,13 +3765,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571913509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.417, y: -0.59, z: 0}
+  m_LocalPosition: {x: -0.417, y: -0.85999995, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1375757279}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1571913511
 SpriteRenderer:
@@ -3854,7 +3855,7 @@ GameObject:
   - component: {fileID: 1629300848}
   - component: {fileID: 1629300849}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: Ship 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3868,13 +3869,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629300846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 0, z: 0}
+  m_LocalPosition: {x: -0.79, y: -0.26999998, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 680706139}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1629300848
 SpriteRenderer:
@@ -4006,7 +4007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755598887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalPosition: {x: 0, y: -0.044, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4188,7 +4189,7 @@ GameObject:
   - component: {fileID: 1859464399}
   - component: {fileID: 1859464400}
   m_Layer: 0
-  m_Name: Square (7)
+  m_Name: Ship 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4202,13 +4203,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859464397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.48, y: 0, z: 0}
+  m_LocalPosition: {x: -1.48, y: -0.26999998, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 172438633}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1859464399
 SpriteRenderer:
@@ -4390,7 +4391,7 @@ GameObject:
   - component: {fileID: 1892737179}
   - component: {fileID: 1892737180}
   m_Layer: 0
-  m_Name: Square (10)
+  m_Name: Ship 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4404,13 +4405,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892737177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.819, y: -0.555, z: 0}
+  m_LocalPosition: {x: -1.819, y: -0.825, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1889719980}
   m_Father: {fileID: 2130841887}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1892737179
 SpriteRenderer:
@@ -4709,7 +4710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130841887}
   m_Layer: 0
-  m_Name: Spawners
+  m_Name: SpawnerShips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4727,21 +4728,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 387778507}
-  - {fileID: 533398022}
-  - {fileID: 157135171}
-  - {fileID: 644469701}
-  - {fileID: 1629300847}
-  - {fileID: 9618015}
   - {fileID: 427220391}
+  - {fileID: 1629300847}
+  - {fileID: 644469701}
   - {fileID: 1859464398}
-  - {fileID: 944448695}
-  - {fileID: 531683768}
-  - {fileID: 1892737178}
   - {fileID: 1571913510}
   - {fileID: 1460537942}
+  - {fileID: 387778507}
+  - {fileID: 533398022}
   - {fileID: 902514845}
+  - {fileID: 1892737178}
+  - {fileID: 157135171}
+  - {fileID: 944448695}
+  - {fileID: 9618015}
   - {fileID: 1536084051}
+  - {fileID: 531683768}
   m_Father: {fileID: 1190096949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
