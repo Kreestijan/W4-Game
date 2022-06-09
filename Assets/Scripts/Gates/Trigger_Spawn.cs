@@ -12,6 +12,7 @@ public class Trigger_Spawn : MonoBehaviour
     [SerializeField] GameObject spawnerCTRL;
     [SerializeField] GameObject mainShip;
     int activeShips;
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +37,15 @@ public class Trigger_Spawn : MonoBehaviour
                 {
                     GameObject deer = collision.gameObject;
                     demo = deer.GetComponent<Gates>();
+                    
                     totalShips += demo.Value;
+
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
                     //Debug.Log(" TRIGGER () current contor is ======" + activeShips);
                     foreach (int i in Enumerable.Range(0, activeShips))
-                        controller[i].SetActive(true);
+                    { controller[i].SetActive(true);
+                        }
 
                     Destroy(GameObject.FindGameObjectWithTag("+"));
                     Destroy(GameObject.FindGameObjectWithTag("-"));
