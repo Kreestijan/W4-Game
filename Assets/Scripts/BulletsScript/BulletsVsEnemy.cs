@@ -6,7 +6,6 @@ public class BulletsVsEnemy : MonoBehaviour
 {
     public float speed=10;
     Transform player;
-    float lineofSight = 2f;
     public float ShootingRange = 10.5f;
     public GameObject bullet;
     public GameObject bulletInst;

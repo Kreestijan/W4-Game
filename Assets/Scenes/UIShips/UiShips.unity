@@ -226,7 +226,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 907435614}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.5
 --- !u!1 &27105623
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1112179901}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.6
 --- !u!1 &172438632
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +895,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 2021940875}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.7
 --- !u!1 &427220390
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &427220391
 Transform:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1823915013}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.701
 --- !u!1 &465913172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 2085934552}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.4
 --- !u!1 &533398021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1177212420}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.8
 --- !u!1 &553092941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 465913172}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.6
 --- !u!1 &680706138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1002891136}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.1
 --- !u!1 &907435614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1527292484}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.4
 --- !u!1 &1002891136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,7 +3603,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1050884869}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.5
 --- !u!1 &1527292484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,7 +3738,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1165815690}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.7
 --- !u!1 &1571913509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,7 +3842,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1375757278}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.4
 --- !u!1 &1629300846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,7 +3946,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 680706138}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.8
 --- !u!1 &1657014532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4280,7 +4280,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 172438632}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.9
 --- !u!1 &1865187666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,7 +4482,7 @@ MonoBehaviour:
   bullet: {fileID: 7523029562009804356, guid: 11f2a11626b47e443868881ae7e453dd, type: 3}
   bulletInst: {fileID: 1889719979}
   nextShot: 0
-  fireRate: 1.001
+  fireRate: 0.8
 --- !u!1 &1937757378
 GameObject:
   m_ObjectHideFlags: 0
