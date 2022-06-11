@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         //playerBody.velocity = new Vector2(aimDirection.x * moveSpeed, scrollSpeed);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collision2D collision)
     {
         if (enemyAI != null)
         {
