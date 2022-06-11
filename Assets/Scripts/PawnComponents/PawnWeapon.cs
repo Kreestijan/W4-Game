@@ -9,11 +9,6 @@ public class PawnWeapon : NetworkBehaviour
 
     private PawnInput _input;
 
-    [SerializeField] private float minDamage;
-    [SerializeField] private float maxDamage;
-    
-    private float damage;
-
     public static PawnWeapon Instance { get; private set; }
 
     public override void OnStartClient()
@@ -37,10 +32,6 @@ public class PawnWeapon : NetworkBehaviour
 
         if (_input.fire)
         {
-            damage = Random.Range(minDamage, maxDamage);
-
-            Debug.Log("Shots fired!");
-
             ServerFire();
 
             _input.fire = false;

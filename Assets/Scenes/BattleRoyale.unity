@@ -755,8 +755,8 @@ MonoBehaviour:
   _scenePathHash: 2216268004
   _sceneId: 9518798597326770863
   _sceneNetworkObjects:
-  - {fileID: 2041108757}
   - {fileID: 1227200624}
+  - {fileID: 2041108757}
   - {fileID: 2042043552}
   - {fileID: 2057536787}
 --- !u!114 &1227200625
@@ -1378,8 +1378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 161.5, y: 28.600006}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 313, y: 28.600006}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933470548
 MonoBehaviour:
@@ -1414,7 +1414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Health 100
+  m_Text: Health 999.00
 --- !u!222 &1933470549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1554,8 +1554,8 @@ MonoBehaviour:
   _scenePathHash: 2216268004
   _sceneId: 9518798600099361896
   _sceneNetworkObjects:
-  - {fileID: 2041108757}
   - {fileID: 1227200624}
+  - {fileID: 2041108757}
   - {fileID: 2042043552}
   - {fileID: 2057536787}
 --- !u!1 &2042043551
@@ -1601,8 +1601,8 @@ MonoBehaviour:
   _scenePathHash: 2216268004
   _sceneId: 9518798598554419415
   _sceneNetworkObjects:
-  - {fileID: 2041108757}
   - {fileID: 1227200624}
+  - {fileID: 2041108757}
   - {fileID: 2042043552}
   - {fileID: 2057536787}
 --- !u!114 &2042043553
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   _scenePathHash: 2216268004
   _sceneId: 9518798596487024226
   _sceneNetworkObjects:
-  - {fileID: 2041108757}
   - {fileID: 1227200624}
+  - {fileID: 2041108757}
   - {fileID: 2042043552}
   - {fileID: 2057536787}

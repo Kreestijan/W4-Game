@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 
@@ -10,11 +7,13 @@ public sealed class Pawn : NetworkBehaviour
 
     [SyncVar] public float health;
 
-    public void ReceiveDamage(float amount)
+    public void TakeDamage(float amount)
     {
         if (!IsSpawned) return;
 
-        if((health -= amount) <= 0.0f)
+        health -= amount;
+        
+        if(health <= 0.0f)
         {
             Despawn();
         }
