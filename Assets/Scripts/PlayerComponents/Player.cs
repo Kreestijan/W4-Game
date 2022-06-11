@@ -36,6 +36,9 @@ public class Player : MonoBehaviour
     private Vector3 aimDirection;
     [SerializeField] bool isShielded = false;
 
+    public Transform shieldAnimation;
+
+
     //insert more powerups attributes here (bool preferably)
 
     private void Awake()
@@ -47,11 +50,13 @@ public class Player : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
         enemyAI = enemy.GetComponent<EnemyAI>();
         shieldRef = shield.GetComponent<PowerUps>();
+        
     }
 
     private void Start()
     {
         startingPositionY = transform.position.y;
+        shieldAnimation.GetComponent<ParticleSystem>().enableEmission = false;
     }
     void Update()
     {
@@ -91,6 +96,7 @@ public class Player : MonoBehaviour
                 shieldRef.isSpawned = false;
 
                 Destroy(shieldRef.gameObject);
+                shieldAnimation.GetComponent<ParticleSystem>().enableEmission = true;
             }
             if (collision.gameObject.CompareTag("Enemy"))
             {
@@ -100,6 +106,7 @@ public class Player : MonoBehaviour
                     enemyAI.canCollide=false;
                     
                     isShielded = !isShielded;
+                    StartCoroutine (stopAnimation());
                 }
 
 
@@ -132,7 +139,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+    IEnumerator stopAnimation()
+    {
+        yield return new WaitForSeconds(.1f);
+        shieldAnimation.GetComponent<ParticleSystem>().enableEmission = false;
+    }
 
     
 

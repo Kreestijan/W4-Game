@@ -15,6 +15,7 @@ TagManager:
   - '-'
   - +
   - Shield
+  - ShieldAnimation
   layers:
   - Default
   - TransparentFX

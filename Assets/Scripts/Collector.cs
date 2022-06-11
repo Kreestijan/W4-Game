@@ -29,5 +29,9 @@ public class Collector : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if(collision.gameObject.CompareTag("+"))
+            Destroy(collision.gameObject);
+        if(collision.gameObject.CompareTag("-"))
+            Destroy(collision.gameObject);
     }
 }

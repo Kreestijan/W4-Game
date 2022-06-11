@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: Pawn
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: cd103cdaa3131a741bd0cf9c8dff73f5
+    m_Address: Assets/ShieldMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: acc0b2401b0ee854bb6787f9538eacde, type: 2}
   m_SchemaSet:
