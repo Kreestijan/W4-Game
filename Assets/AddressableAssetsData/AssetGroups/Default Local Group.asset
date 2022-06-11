@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/ShieldMaterial.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 89d8a6dac0d94f74aac0a4e3e934379c
+    m_Address: Assets/Prefabs/Enemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: acc0b2401b0ee854bb6787f9538eacde, type: 2}
   m_SchemaSet:
