@@ -770,8 +770,6 @@ GameObject:
   - component: {fileID: 1387754889}
   - component: {fileID: 1387754890}
   - component: {fileID: 1387754891}
-  - component: {fileID: 1387754893}
-  - component: {fileID: 1387754892}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -862,49 +860,6 @@ MonoBehaviour:
   _maximumClients: 4095
   _clientAddress: localhost
   _timeout: 15
---- !u!114 &1387754892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387754886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _networkBehaviours:
-  - {fileID: 1387754893}
-  SceneTransformProperties:
-    Position: {x: 0, y: 0, z: 1}
-    Rotation: {x: 0, y: 0, z: 0, w: 1}
-    LocalScale: {x: 1, y: 1, z: 1}
-  _isNetworked: 1
-  _hasParentNetworkObjectAtEdit: 0
-  NetworkObserver: {fileID: 0}
-  _prefabId: -1
-  _scenePathHash: 1376736351
-  _sceneId: 5913037605365052329
-  _sceneNetworkObjects:
-  - {fileID: 1387754892}
---- !u!114 &1387754893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387754886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063d12d8361180448bd4b8f99f6e0ac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 0
-  _addedNetworkObject: {fileID: 1387754892}
-  _networkObjectCache: {fileID: 1387754892}
-  ipAddressField: {fileID: 2086800918}
-  port: 7770
 --- !u!1 &1478092248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1273,7 @@ GameObject:
   - component: {fileID: 2086800920}
   - component: {fileID: 2086800919}
   - component: {fileID: 2086800918}
+  - component: {fileID: 2086800921}
   m_Layer: 5
   m_Name: ipAddressField
   m_TagString: Untagged
@@ -1406,13 +1362,25 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_CustomCaretColor: 0
+      m_Calls:
+      - m_Target: {fileID: 2086800921}
+        m_TargetAssemblyTypeName: IpInputField, Assembly-CSharp
+        m_MethodName: SetTugBoatAddress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_CaretColor: {r: 1, g: 0, b: 0, a: 1}
+  m_CustomCaretColor: 1
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0.85
-  m_CaretWidth: 1
+  m_CaretWidth: 3
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
 --- !u!114 &2086800919
@@ -1453,3 +1421,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086800916}
   m_CullTransparentMesh: 1
+--- !u!114 &2086800921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086800916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c241073d5517284c96aa2b722854349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
