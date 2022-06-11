@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 4604193216400424914}
   m_Layer: 6
   m_Name: Pawn
-  m_TagString: Untagged
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,9 +196,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 4683248696927807984}
   projectilePrefab: {fileID: 1196080161882782251, guid: 5acc3dc71913de141989f1f2c6f3ee0a, type: 3}
   firePoint: {fileID: 6215806542748147833}
-  minDamage: 3
-  maxDamage: 9
-  projectileSpeed: 10
 --- !u!114 &4683248696927807984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +223,7 @@ MonoBehaviour:
   _isNetworked: 1
   _hasParentNetworkObjectAtEdit: 0
   NetworkObserver: {fileID: 0}
-  _prefabId: 6
+  _prefabId: 7
   _scenePathHash: 0
   _sceneId: 0
   _sceneNetworkObjects:
@@ -286,8 +283,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0016409159, y: 0.04266447}
-  m_Size: {x: 0.76583314, y: 0.9606174}
+  m_Offset: {x: -0.0016409159, y: 0.034434736}
+  m_Size: {x: 0.76583314, y: 0.94415796}
   m_Direction: 0
 --- !u!50 &4604193216400424914
 Rigidbody2D:
@@ -334,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6156729399329385104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.57, z: 0}
+  m_LocalPosition: {x: 0, y: 0.857, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -415,10 +412,10 @@ PrefabInstance:
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _networkObjectCache
       value: 
-      objectReference: {fileID: 4683248696927807984}
+      objectReference: {fileID: 0}
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _componentIndexCache
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}

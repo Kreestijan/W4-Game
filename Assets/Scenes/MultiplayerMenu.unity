@@ -1365,7 +1365,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2086800921}
         m_TargetAssemblyTypeName: IpInputField, Assembly-CSharp
-        m_MethodName: SetTugBoatAddress
+        m_MethodName: SetTugboatAddress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -132,6 +132,8 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 1351298226316203052}
   projectileSpeed: 10
   projectileBody: {fileID: 1331874186131229192}
+  minDamage: 3
+  maxDamage: 7
 --- !u!114 &1440539334993276908
 MonoBehaviour:
   m_ObjectHideFlags: 0
