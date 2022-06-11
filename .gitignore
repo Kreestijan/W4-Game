@@ -71,6 +71,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-#FishNetworking stuff
+#Stuff
 DefaultPrefabObjects.asset
 *.Cecil.sln.meta
+
+PlayFlowCloud.meta
+Lib.meta
+Windows.meta
