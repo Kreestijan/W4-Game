@@ -9,12 +9,15 @@ public class FollowingBulletEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Enemy").transform;   
+        player = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
     // Update is called once per frame
     void Update()
+
     {
+
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 }
+
