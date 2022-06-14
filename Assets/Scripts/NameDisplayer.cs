@@ -6,12 +6,16 @@ using UnityEngine.UI;
 public class NameDisplayer : NetworkBehaviour
 {
     [SerializeField] private Text _text;
+    [SerializeField] private float playerNameOffset;
+
+    private Pawn _pawn;
+
+    private Quaternion originalTextRotation;
 
     public override void OnStartClient()
     {
         base.OnStartClient();
         PlayerNameTracker.OnNameChange += PlayerNameTracker_OnNameChange;
-        
     }
 
     public override void OnStopClient()
@@ -24,6 +28,20 @@ public class NameDisplayer : NetworkBehaviour
     {
         base.OnOwnershipClient(prevOwner);
         SetName();
+    }
+    private void Awake()
+    {
+        _pawn = GetComponent<Pawn>();
+        
+        originalTextRotation = _text.transform.rotation;
+        
+    }
+
+    private void Update()
+    {
+        _text.transform.position = new Vector3(_pawn.transform.position.x, _pawn.transform.position.y + playerNameOffset, 1);
+
+        _text.transform.rotation = originalTextRotation;
     }
 
     private void PlayerNameTracker_OnNameChange(NetworkConnection arg1, string arg2)
