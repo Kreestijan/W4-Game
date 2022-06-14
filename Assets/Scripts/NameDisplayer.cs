@@ -47,9 +47,6 @@ public class NameDisplayer : NetworkBehaviour
 
     private void PlayerNameTracker_OnNameChange(NetworkConnection arg1, string arg2)
     {
-        //if (arg1 != base.Owner)
-            //return;
-        
         SetName();
     }
 
