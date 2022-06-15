@@ -6,8 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyRef;
 
-    private GameObject enemyOnScreen;
-
+    public GameObject enemyOnScreen;
 
     private double chance;
 
@@ -28,7 +27,6 @@ public class EnemySpawner : MonoBehaviour
                     target = new Vector2(Random.Range(-7, 7), this.transform.position.y);
 
                     enemyOnScreen = Instantiate(enemyRef);
-
 
                     enemyOnScreen.transform.position = target;
                 

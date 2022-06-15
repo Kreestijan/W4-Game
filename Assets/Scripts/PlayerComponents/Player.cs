@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     EnemyAI enemyAI;
     [SerializeField] GameObject enemy;
 
-    PowerUps shieldRef;
+    PowerUps shieldScript;
     [SerializeField] GameObject shield;
 
     private Rigidbody2D playerBody;
@@ -38,6 +38,12 @@ public class Player : MonoBehaviour
 
     public Transform shieldAnimation;
 
+    EnemySpawner enemySpawnerScript;
+    [SerializeField] GameObject enemySpawner;
+
+    PowerupSpawner powerupSpawnerScript;
+
+    [SerializeField] GameObject powerupSpawner;
 
     //insert more powerups attributes here (bool preferably)
 
@@ -49,8 +55,9 @@ public class Player : MonoBehaviour
 
         playerBody = GetComponent<Rigidbody2D>();
         enemyAI = enemy.GetComponent<EnemyAI>();
-        shieldRef = shield.GetComponent<PowerUps>();
-        
+        shieldScript = shield.GetComponent<PowerUps>();
+        enemySpawnerScript = enemySpawner.GetComponent<EnemySpawner>();
+        powerupSpawnerScript = powerupSpawner.GetComponent<PowerupSpawner>();
     }
 
     private void Start()
@@ -67,11 +74,36 @@ public class Player : MonoBehaviour
     {
         MovePlayer();
         GetDistanceTraveled();
+        //assign new clone objects references to player object
+        ReassignInstances();
     }
     
     private void GetPlayerInput()
     {
         movementX = Input.GetAxisRaw("Horizontal");
+    }
+
+    void ReassignInstances()//function for reassigning the instances of new clones
+    {
+        if(enemy == null)
+        {
+            
+            if(enemySpawnerScript.enemyOnScreen != null)
+            {  
+                enemy = enemySpawnerScript.enemyOnScreen;
+            }
+            
+        }
+
+        if(shield == null)
+        {
+            
+            if(powerupSpawnerScript.shieldOnScreen != null)
+            {  
+                shield = powerupSpawnerScript.shieldOnScreen;
+            }
+            
+        }
     }
 
     private void MovePlayer()
@@ -86,25 +118,28 @@ public class Player : MonoBehaviour
         //playerBody.velocity = new Vector2(aimDirection.x * moveSpeed, scrollSpeed);
     }
 
-    void OnTriggerEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if (enemyAI != null)
         {
-            if (collision.gameObject.CompareTag("Shield"))
+            
+            if (collider.gameObject.CompareTag("Shield"))
             {
                 isShielded = true;
-                shieldRef.isSpawned = false;
+                shieldScript.isSpawned = false;
 
-                Destroy(shieldRef.gameObject);
+                Destroy(shieldScript.gameObject);
                 shieldAnimation.GetComponent<ParticleSystem>().enableEmission = true;
             }
-            if (collision.gameObject.CompareTag("Enemy"))
+            
+    
+            if (collider.gameObject.CompareTag("Enemy"))
             {
                 
                 if (isShielded == true)
                 {
                     enemyAI.canCollide=false;
-                    
+                    Destroy(enemyAI.gameObject);
                     isShielded = !isShielded;
                     StartCoroutine (stopAnimation());
                 }
@@ -117,6 +152,7 @@ public class Player : MonoBehaviour
                         enemyAI.canCollide=false;
                         playerHP -= enemyAI.enemyHP;
                         enemyAI.enemyHP -= enemyAI.enemyHP;
+                        Destroy(enemyAI.gameObject);
                     }
                     if (playerHP <= enemyAI.enemyHP)
                     {
@@ -128,9 +164,6 @@ public class Player : MonoBehaviour
                     }
 
                 }
-
-                if(enemyAI.canCollide == false)
-                    Destroy(enemyAI.gameObject);
 
             }
             Debug.Log(playerHP);

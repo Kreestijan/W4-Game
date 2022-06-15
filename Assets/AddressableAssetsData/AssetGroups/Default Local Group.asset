@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/ShieldPrefab.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 40a35fe5e8c189b4c82da9844843221e
+    m_Address: Assets/Prefabs/ShieldAnimationPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: acc0b2401b0ee854bb6787f9538eacde, type: 2}
   m_SchemaSet:
