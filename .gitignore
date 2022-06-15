@@ -74,3 +74,4 @@ crashlytics-build.properties
 #FishNetworking stuff
 DefaultPrefabObjects.asset
 *.Cecil.sln.meta
+*.meta

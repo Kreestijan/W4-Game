@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class DeathTime : MonoBehaviour
 {
-
+    public float Death_Time;
+   // public GameObject expl;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Wait(1.5f));
+        /*var ob=expl.GetComponent<SpriteRenderer>();
+        int LayerIgnoreRaycast = LayerMask.NameToLayer("UI");
+        gameObject.layer = LayerIgnoreRaycast;
+        ob.sortingLayerName("Actors");*/
+        StartCoroutine(Wait(Death_Time));
     }
 
     IEnumerator Wait(float a)

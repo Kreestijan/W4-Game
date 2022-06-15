@@ -33,6 +33,10 @@ public class FollowingBulletPlayer : MonoBehaviour
         else if (Intercept.Length >= 1 )
         { 
             transform.position = Vector2.MoveTowards(transform.position, Intercept[randValue].transform.position, speed * Time.deltaTime);
+            if(Intercept[randValue].activeSelf==false)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }

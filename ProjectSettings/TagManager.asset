@@ -18,6 +18,7 @@ TagManager:
   - Pawn
   - LaserBeam
   - Interceptor
+  - Explozie
   layers:
   - Default
   - TransparentFX
