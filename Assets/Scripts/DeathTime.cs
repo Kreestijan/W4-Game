@@ -9,10 +9,6 @@ public class DeathTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*var ob=expl.GetComponent<SpriteRenderer>();
-        int LayerIgnoreRaycast = LayerMask.NameToLayer("UI");
-        gameObject.layer = LayerIgnoreRaycast;
-        ob.sortingLayerName("Actors");*/
         StartCoroutine(Wait(Death_Time));
     }
 

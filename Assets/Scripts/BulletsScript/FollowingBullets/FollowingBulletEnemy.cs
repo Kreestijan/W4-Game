@@ -18,6 +18,10 @@ public class FollowingBulletEnemy : MonoBehaviour
     {
 
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        if(transform.position==player.position)
+        {
+            Destroy(gameObject);
+        }
     }
 }
 

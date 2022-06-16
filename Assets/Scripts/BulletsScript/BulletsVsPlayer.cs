@@ -27,7 +27,6 @@ public class BulletsVsPlayer : MonoBehaviour
     {
         
 
-        /////////
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if(distanceFromPlayer<=ShootingRange && nextShot<Time.time)
         {

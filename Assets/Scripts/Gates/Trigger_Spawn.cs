@@ -23,11 +23,12 @@ public class Trigger_Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ActiveShips();
 
 
     }
-    
+    int ActiveShips()
+    { return activeShips; }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string TAG = collision.gameObject.tag;
@@ -37,16 +38,14 @@ public class Trigger_Spawn : MonoBehaviour
                 {
                     GameObject deer = collision.gameObject;
                     demo = deer.GetComponent<Gates>();
-                    
                     totalShips += demo.Value;
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
-                    //Debug.Log(" TRIGGER () current contor is ======" + activeShips);
                     foreach (int i in Enumerable.Range(0, activeShips))
-                    { controller[i].SetActive(true);
-                        //effects[i].GetComponent;
-                        }
+                    { 
+                        controller[i].SetActive(true);
+                    }
 
                     Destroy(GameObject.FindGameObjectWithTag("+"));
                     Destroy(GameObject.FindGameObjectWithTag("-"));
