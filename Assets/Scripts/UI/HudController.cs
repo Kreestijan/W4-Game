@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using FishNet.Object;
-using FishNet.Object.Synchronizing;
 
 public sealed class HudController : NetworkBehaviour
 {
@@ -26,19 +23,19 @@ public sealed class HudController : NetworkBehaviour
     [ObserversRpc]
     private void ObserversUpdatePlayerCountText(int playerCount)
     {
-        playerCountText.text = $"Online Players: {playerCount}";
+        playerCountText.text = $"Online: {playerCount}";
     }
 
     [ServerRpc(RequireOwnership = false)]
     private void ServerUpdateAlivePlayersCountText()
     {
-        ObserversUpdateAlivePlayersCountText(999);
+        ObserversUpdateAlivePlayersCountText(GameManager.Instance.alivePlayers);
     }
 
     [ObserversRpc]
     private void ObserversUpdateAlivePlayersCountText(int alivePlayerCount)
     {
-        alivePlayersCountText.text = $"Alive Players: {alivePlayerCount}";
+        alivePlayersCountText.text = $"Alive: {alivePlayerCount}";
     }
 
 }//class

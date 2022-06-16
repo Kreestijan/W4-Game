@@ -11,9 +11,7 @@ public sealed class BRPlayer : NetworkBehaviour
 
     [SyncVar] public string nickname;
 
-    [SyncVar] public bool isReady;
-
-    [SyncVar] public bool isAlive = true;
+    [SyncVar] public bool isReady; 
 
     [SyncVar] public Pawn controlledPawn;
 
@@ -69,17 +67,23 @@ public sealed class BRPlayer : NetworkBehaviour
         controlledPawn.controllingPlayer = this;
 
         TargetPawnSpawned(Owner);
+
+        GameManager.Instance.alivePlayers++;
     }
 
+    
+    public void StopGame()
+    {
+        if (controlledPawn != null && controlledPawn.IsSpawned)
+        {
+            controlledPawn.Despawn();
+        }            
+    }
+    
     [ServerRpc(RequireOwnership = false)]
     public void Respawn()
     {
         StartGame();
-    }
-    
-    public void StopGame()
-    {
-        if (controlledPawn != null && controlledPawn.IsSpawned) controlledPawn.Despawn();
     }
 
     [ServerRpc(RequireOwnership = false)] 
@@ -98,8 +102,6 @@ public sealed class BRPlayer : NetworkBehaviour
     public void TargetPawnKilled(NetworkConnection networkConnection)
     {
         UIManager.Instance.Show<RespawnView>();
-
-        isAlive = false;
     }
     
 }//class

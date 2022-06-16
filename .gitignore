@@ -71,10 +71,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-#Stuff
-DefaultPrefabObjects.asset
-*.Cecil.sln.meta
+#Stuff that Unity likes to put in the project folder
+Assets/FishNet/Runtime/DefaultPrefabObjects.asset
+Assets/FishNet/CodeGenerating/cecil-0.11.4/Mono.Cecil.sln.meta
+Assets/AddressableAssetsData/Windows.meta
 
-PlayFlowCloud.meta
-Lib.meta
-Windows.meta
+Assets/PlayFlowCloud.meta
+Assets/PlayFlowCloud/Lib.meta
