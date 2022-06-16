@@ -13,16 +13,11 @@ public sealed class HudController : NetworkBehaviour
 
     private void Update()
     {
-                        
-
-        if(IsHost) this.GiveOwnership(LocalConnection);
-
-        if (!IsOwner) return;
-        
         ServerUpdatePlayerCountText();
+        ServerUpdateAlivePlayersCountText();
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void ServerUpdatePlayerCountText()
     {
         ObserversUpdatePlayerCountText(ServerManager.Clients.Count);
@@ -34,16 +29,16 @@ public sealed class HudController : NetworkBehaviour
         playerCountText.text = $"Online Players: {playerCount}";
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void ServerUpdateAlivePlayersCountText()
     {
-
+        ObserversUpdateAlivePlayersCountText(999);
     }
 
     [ObserversRpc]
     private void ObserversUpdateAlivePlayersCountText(int alivePlayerCount)
     {
-
+        alivePlayersCountText.text = $"Alive Players: {alivePlayerCount}";
     }
-    
+
 }//class
