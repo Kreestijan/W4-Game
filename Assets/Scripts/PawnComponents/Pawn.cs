@@ -22,6 +22,7 @@ public sealed class Pawn : NetworkBehaviour
         {
             controllingPlayer.TargetPawnKilled(Owner);
             Despawn();
+            GameManager.Instance.alivePlayers--;
         }
     }
 

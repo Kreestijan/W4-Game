@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
@@ -12,6 +10,8 @@ public sealed class GameManager : NetworkBehaviour
     [SyncObject] public readonly SyncList<BRPlayer> players = new();
 
     [SyncVar] public bool canStart;
+
+    [SyncVar] public int alivePlayers = 0;
 
     private void Awake()
     {
@@ -35,7 +35,6 @@ public sealed class GameManager : NetworkBehaviour
         for (int i = 0; i < players.Count; i++)
         {
             players[i].StartGame();
-
         }
     }
 
@@ -45,7 +44,6 @@ public sealed class GameManager : NetworkBehaviour
         for (int i = 0; i < players.Count; i++)
         {
             players[i].StopGame();
-
         }
     }
     
