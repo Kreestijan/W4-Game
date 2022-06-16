@@ -7,6 +7,11 @@ public sealed class Pawn : NetworkBehaviour
 
     [SyncVar] public float health;
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+    }
+
     public void TakeDamage(float amount)
     {
         if (!IsSpawned) return;
@@ -15,6 +20,7 @@ public sealed class Pawn : NetworkBehaviour
         
         if(health <= 0.0f)
         {
+            controllingPlayer.TargetPawnKilled(Owner);
             Despawn();
         }
     }
