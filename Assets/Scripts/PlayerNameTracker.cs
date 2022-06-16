@@ -55,8 +55,8 @@ public class PlayerNameTracker : NetworkBehaviour
     {
         if (_instance._playerNames.TryGetValue(conn, out string result))
             return result;
-        else
-            return string.Empty;
+
+        return string.Empty;
     }
 
     //Lets clients set their nickname
