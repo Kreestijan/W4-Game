@@ -12,8 +12,8 @@ public class BulletsVsEnemy : MonoBehaviour
     public float nextShot;
     public float fireRate = 1.001f;
     Vector2 Direction;
-    public GameObject nava;
-    public Transform Target;
+    public GameObject navaPlayer;
+    public Transform TargetEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +23,11 @@ public class BulletsVsEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 targetPos = Target.position;
+        Vector2 targetPos = TargetEnemy.position;
         Direction = targetPos - (Vector2)transform.position;
         
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        nava.transform.up = Direction * Time.deltaTime ;
+        navaPlayer.transform.up = Direction * Time.deltaTime ;
         if (distanceFromPlayer<=ShootingRange && nextShot<Time.time)
         {
             
