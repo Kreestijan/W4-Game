@@ -134,13 +134,14 @@ GameObject:
   - component: {fileID: 9618015}
   - component: {fileID: 9618016}
   - component: {fileID: 9618017}
+  - component: {fileID: 9618018}
   m_Layer: 0
   m_Name: Ship 13
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9618015
 Transform:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 9618014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7, y: -1.42, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 907435615}
@@ -198,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -227,6 +228,21 @@ MonoBehaviour:
   bulletInst: {fileID: 907435614}
   nextShot: 0
   fireRate: 0.5
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &9618018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9618014}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &27105623
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,13 +516,14 @@ GameObject:
   - component: {fileID: 157135171}
   - component: {fileID: 157135172}
   - component: {fileID: 157135173}
+  - component: {fileID: 157135174}
   m_Layer: 0
   m_Name: Ship 11
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &157135171
 Transform:
   m_ObjectHideFlags: 0
@@ -516,7 +533,7 @@ Transform:
   m_GameObject: {fileID: 157135170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.02, y: -1.42, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1112179902}
@@ -564,7 +581,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -593,6 +610,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1112179901}
   nextShot: 0
   fireRate: 0.6
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &157135174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157135170}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &172438632
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,13 +952,14 @@ GameObject:
   - component: {fileID: 387778507}
   - component: {fileID: 387778508}
   - component: {fileID: 387778509}
+  - component: {fileID: 387778510}
   m_Layer: 0
   m_Name: Ship 7
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &387778507
 Transform:
   m_ObjectHideFlags: 0
@@ -936,7 +969,7 @@ Transform:
   m_GameObject: {fileID: 387778506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.06, y: -0.852, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2021940876}
@@ -984,7 +1017,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1013,6 +1046,21 @@ MonoBehaviour:
   bulletInst: {fileID: 2021940875}
   nextShot: 0
   fireRate: 0.7
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &387778510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387778506}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &427220390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &427220391
 Transform:
   m_ObjectHideFlags: 0
@@ -1040,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 427220390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.72, y: -0.26999998, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7018778, y: 0.7018778, z: 0.7018778}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823915014}
@@ -1088,7 +1136,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1117,6 +1165,8 @@ MonoBehaviour:
   bulletInst: {fileID: 1823915013}
   nextShot: 0
   fireRate: 0.701
+  nava: {fileID: 427220390}
+  Target: {fileID: 1031865443}
 --- !u!1 &465913172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,13 +1564,14 @@ GameObject:
   - component: {fileID: 531683768}
   - component: {fileID: 531683769}
   - component: {fileID: 531683770}
+  - component: {fileID: 531683771}
   m_Layer: 0
   m_Name: Ship 15
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &531683768
 Transform:
   m_ObjectHideFlags: 0
@@ -1530,7 +1581,7 @@ Transform:
   m_GameObject: {fileID: 531683767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.49, y: -1.42, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2085934553}
@@ -1578,7 +1629,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1607,6 +1658,21 @@ MonoBehaviour:
   bulletInst: {fileID: 2085934552}
   nextShot: 0
   fireRate: 0.4
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &531683771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531683767}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &533398021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,13 +1684,14 @@ GameObject:
   - component: {fileID: 533398022}
   - component: {fileID: 533398023}
   - component: {fileID: 533398024}
+  - component: {fileID: 533398025}
   m_Layer: 0
   m_Name: Ship 8
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &533398022
 Transform:
   m_ObjectHideFlags: 0
@@ -1634,7 +1701,7 @@ Transform:
   m_GameObject: {fileID: 533398021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.15, y: -0.82, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1177212421}
@@ -1682,7 +1749,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1711,6 +1778,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1177212420}
   nextShot: 0
   fireRate: 0.8
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &533398025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533398021}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &553092941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,13 +2062,14 @@ GameObject:
   - component: {fileID: 644469701}
   - component: {fileID: 644469702}
   - component: {fileID: 644469703}
+  - component: {fileID: 644469704}
   m_Layer: 0
   m_Name: Ship 3
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &644469701
 Transform:
   m_ObjectHideFlags: 0
@@ -1996,7 +2079,7 @@ Transform:
   m_GameObject: {fileID: 644469700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.42, y: -0.26999998, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 465913173}
@@ -2044,7 +2127,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2073,6 +2156,21 @@ MonoBehaviour:
   bulletInst: {fileID: 465913172}
   nextShot: 0
   fireRate: 0.6
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &644469704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644469700}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &680706138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,13 +2543,14 @@ GameObject:
   - component: {fileID: 902514845}
   - component: {fileID: 902514846}
   - component: {fileID: 902514847}
+  - component: {fileID: 902514848}
   m_Layer: 0
   m_Name: Ship 9
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &902514845
 Transform:
   m_ObjectHideFlags: 0
@@ -2461,7 +2560,7 @@ Transform:
   m_GameObject: {fileID: 902514844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.744, y: -0.871, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1002891137}
@@ -2509,7 +2608,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2538,6 +2637,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1002891136}
   nextShot: 0
   fireRate: 0.1
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &902514848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902514844}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &907435614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,13 +2694,14 @@ GameObject:
   - component: {fileID: 944448695}
   - component: {fileID: 944448696}
   - component: {fileID: 944448697}
+  - component: {fileID: 944448698}
   m_Layer: 0
   m_Name: Ship 12
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &944448695
 Transform:
   m_ObjectHideFlags: 0
@@ -2596,7 +2711,7 @@ Transform:
   m_GameObject: {fileID: 944448694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.73, y: -1.42, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1527292485}
@@ -2644,7 +2759,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2673,6 +2788,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1527292484}
   nextShot: 0
   fireRate: 0.4
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &944448698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944448694}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &985045517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,13 +4137,14 @@ GameObject:
   - component: {fileID: 1460537942}
   - component: {fileID: 1460537943}
   - component: {fileID: 1460537944}
+  - component: {fileID: 1460537945}
   m_Layer: 0
   m_Name: Ship 6
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1460537942
 Transform:
   m_ObjectHideFlags: 0
@@ -4023,7 +4154,7 @@ Transform:
   m_GameObject: {fileID: 1460537941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.397, y: -0.86, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1050884870}
@@ -4071,7 +4202,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4100,6 +4231,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1050884869}
   nextShot: 0
   fireRate: 0.5
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &1460537945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460537941}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &1506652399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,13 +4400,14 @@ GameObject:
   - component: {fileID: 1536084051}
   - component: {fileID: 1536084052}
   - component: {fileID: 1536084053}
+  - component: {fileID: 1536084054}
   m_Layer: 0
   m_Name: Ship 14
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1536084051
 Transform:
   m_ObjectHideFlags: 0
@@ -4270,7 +4417,7 @@ Transform:
   m_GameObject: {fileID: 1536084050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3699999, y: -1.4200001, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1165815691}
@@ -4318,7 +4465,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9e5557f0fc1e54fa4bfb9767190936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4347,6 +4494,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1165815690}
   nextShot: 0
   fireRate: 0.7
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &1536084054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536084050}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &1571913509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,13 +4520,14 @@ GameObject:
   - component: {fileID: 1571913510}
   - component: {fileID: 1571913511}
   - component: {fileID: 1571913512}
+  - component: {fileID: 1571913513}
   m_Layer: 0
   m_Name: Ship 5
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1571913510
 Transform:
   m_ObjectHideFlags: 0
@@ -4374,7 +4537,7 @@ Transform:
   m_GameObject: {fileID: 1571913509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.417, y: -0.85999995, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1375757279}
@@ -4422,7 +4585,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4451,6 +4614,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1375757278}
   nextShot: 0
   fireRate: 0.4
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &1571913513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571913509}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &1629300846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,13 +4640,14 @@ GameObject:
   - component: {fileID: 1629300847}
   - component: {fileID: 1629300848}
   - component: {fileID: 1629300849}
+  - component: {fileID: 1629300850}
   m_Layer: 0
   m_Name: Ship 2
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1629300847
 Transform:
   m_ObjectHideFlags: 0
@@ -4478,7 +4657,7 @@ Transform:
   m_GameObject: {fileID: 1629300846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.79, y: -0.26999998, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 680706139}
@@ -4526,7 +4705,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4555,6 +4734,21 @@ MonoBehaviour:
   bulletInst: {fileID: 680706138}
   nextShot: 0
   fireRate: 0.8
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &1629300850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629300846}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &1657014532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,6 +5053,8 @@ MonoBehaviour:
   bulletInst: {fileID: 1016619047}
   nextShot: 0
   fireRate: 1.001
+  nava: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!1 &1823915013
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,13 +5097,14 @@ GameObject:
   - component: {fileID: 1859464398}
   - component: {fileID: 1859464399}
   - component: {fileID: 1859464400}
+  - component: {fileID: 1859464401}
   m_Layer: 0
   m_Name: Ship 4
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1859464398
 Transform:
   m_ObjectHideFlags: 0
@@ -4917,7 +5114,7 @@ Transform:
   m_GameObject: {fileID: 1859464397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.48, y: -0.26999998, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 172438633}
@@ -4965,7 +5162,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4994,6 +5191,21 @@ MonoBehaviour:
   bulletInst: {fileID: 172438632}
   nextShot: 0
   fireRate: 0.9
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &1859464401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859464397}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &1865187666
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,13 +5315,14 @@ GameObject:
   - component: {fileID: 1892737178}
   - component: {fileID: 1892737179}
   - component: {fileID: 1892737180}
+  - component: {fileID: 1892737181}
   m_Layer: 0
   m_Name: Ship 10
   m_TagString: Interceptor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1892737178
 Transform:
   m_ObjectHideFlags: 0
@@ -5119,7 +5332,7 @@ Transform:
   m_GameObject: {fileID: 1892737177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.819, y: -0.825, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalScale: {x: 0.7547549, y: 0.7547549, z: 0.7547549}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1889719980}
@@ -5167,7 +5380,7 @@ SpriteRenderer:
   m_SortingLayerID: 1865952487
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1016250874, guid: 83e9c52b98383494c88d7196282cac9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae769b69f521ab4194a7760abca5946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5196,6 +5409,21 @@ MonoBehaviour:
   bulletInst: {fileID: 1889719979}
   nextShot: 0
   fireRate: 0.8
+  nava: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &1892737181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892737177}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4b402a0a597cf4abe9a017fca173db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obiect: {fileID: 1031865443}
 --- !u!1 &1937757378
 GameObject:
   m_ObjectHideFlags: 0
