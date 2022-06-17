@@ -35,11 +35,13 @@ public sealed class LaserBeam : NetworkBehaviour
         
         if (IsSpawned && collision.gameObject.CompareTag("Pawn"))
         {
+
+            if (this.Owner.ClientId == collision.gameObject.GetComponent<PawnWeapon>().Owner.ClientId) return;
             
             damage = Random.Range(minDamage, maxDamage);
 
             Debug.Log($"Damage: {damage}");
-
+            
             collision.gameObject.GetComponent<Pawn>().TakeDamage(damage);
 
             Despawn();
