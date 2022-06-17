@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FishNet.Object;
-using System.Runtime.CompilerServices;
-using TMPro;
-using Unity.VisualScripting;
 
 public sealed class LaserBeam : NetworkBehaviour
 {
@@ -24,10 +19,7 @@ public sealed class LaserBeam : NetworkBehaviour
         if (!IsOwner) return;
 
         projectileBody.velocity = PawnWeapon.Instance.firePoint.up * projectileSpeed;
-    }
 
-    private void FixedUpdate()
-    {
         Invoke(nameof(SelfDestruct), 10.0f);
     }
 
