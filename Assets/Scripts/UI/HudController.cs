@@ -7,7 +7,6 @@ public sealed class HudController : NetworkBehaviour
     [SerializeField] private Text playerCountText;
     
     [SerializeField] private Text alivePlayersCountText;
-
     private void Update()
     {
         ServerUpdatePlayerCountText();

@@ -17,28 +17,50 @@ public sealed class PawnInput : NetworkBehaviour
 
     public bool fire;
 
+    private Joystick joystick;
 
+    
     public override void OnStartNetwork()
     {
         base.OnStartNetwork();
 
         _pawn = GetComponent<Pawn>();
+
+        if (GameObject.FindWithTag("Joystick") != null)
+        {
+            joystick = GameObject.FindWithTag("Joystick").GetComponent<Joystick>();
+        }
     }
 
     private void Update()
     {
         if (!IsOwner) return;
-        
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-        
-        turbo = Input.GetButton("Jump");
 
-        if (Input.GetButtonDown("Fire1"))
+        Debug.Log($"Platform: {Application.platform}");
+
+        if (Application.platform == RuntimePlatform.Android && joystick != null)
         {
-            fire = true;
-        }
+            horizontal = joystick.Horizontal;
+            vertical = joystick.Vertical;
 
+            if (Input.touchCount > 0 && Input.GetTouch(1).phase == TouchPhase.Began)
+            {
+                fire = true;
+            }
+        }
+        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+        {
+
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
+
+            turbo = Input.GetButton("Jump");
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                fire = true;
+            }
+        }
     }
     
 
