@@ -34,7 +34,10 @@ public class Player : MonoBehaviour
 
     private Vector3 mousePosition;
     private Vector3 aimDirection;
+    
     [SerializeField] bool isShielded = false;
+
+    private float accelerometerMultiplier = 1.7f;
 
     //insert more powerups attributes here (bool preferably)
 
@@ -66,19 +69,27 @@ public class Player : MonoBehaviour
     
     private void GetPlayerInput()
     {
-        movementX = Input.GetAxisRaw("Horizontal");
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            movementX = Input.acceleration.x * accelerometerMultiplier;
+        }
+        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            movementX = Input.GetAxisRaw("Horizontal");
+        }
     }
 
     private void MovePlayer()
     {
-        mousePosition = UtilsClass.GetMouseWorldPosition();
-
-        aimDirection = (mousePosition - transform.position).normalized;
-
-
 
         playerBody.velocity = new Vector2(movementX * moveSpeed, scrollSpeed);
+        
+        //mousePosition = UtilsClass.GetMouseWorldPosition();
+
+        //aimDirection = (mousePosition - transform.position).normalized;
+
         //playerBody.velocity = new Vector2(aimDirection.x * moveSpeed, scrollSpeed);
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)
