@@ -14,13 +14,12 @@ public class BulletsVsEnemy : MonoBehaviour
     Vector2 Direction;
     public GameObject navaPlayer;
     public Transform TargetEnemy;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 targetPos = TargetEnemy.position;

@@ -28,7 +28,6 @@ public class RazaExplozii : MonoBehaviour
         
         
     }
-    // Update is called once per frame
      void Spawn()
     {
         

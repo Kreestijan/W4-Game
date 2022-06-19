@@ -22,7 +22,7 @@ public class BulletsVsPlayer : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Vector2 targetPos = TargetPlayer.position;
@@ -39,8 +39,6 @@ public class BulletsVsPlayer : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, lineofSight);
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, ShootingRange);
     }

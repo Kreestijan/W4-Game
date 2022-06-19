@@ -78,7 +78,6 @@ public class Player : MonoBehaviour
 
 
         playerBody.velocity = new Vector2(movementX * moveSpeed, scrollSpeed);
-        //playerBody.velocity = new Vector2(aimDirection.x * moveSpeed, scrollSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

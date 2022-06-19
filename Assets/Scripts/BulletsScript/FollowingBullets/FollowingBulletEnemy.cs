@@ -12,7 +12,6 @@ public class FollowingBulletEnemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
-    // Update is called once per frame
     void Update()
 
     {
