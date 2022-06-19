@@ -14,17 +14,22 @@ public class Trigger_Spawn : MonoBehaviour
     int activeShips;
     public GameObject effect;
 
+    PowerUps shieldScript;
+    [SerializeField] GameObject shield;
+
+    Player playerScript;
+    [SerializeField] GameObject player;    
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        shieldScript = shield.GetComponent<PowerUps>();
+        playerScript = player.GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
 
     }
     
@@ -57,6 +62,16 @@ public class Trigger_Spawn : MonoBehaviour
                 {
                     GameObject deer = collision.gameObject;
                     demo = deer.GetComponent<Gates>();
+                    
+                    /*if(playerScript.isShielded == true)
+                    {
+                        playerScript.isShielded = false;
+                    }
+                    else
+                    {
+                        totalShips -= demo.Value;
+                    }*/
+                    
                     totalShips -= demo.Value;
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
