@@ -23,8 +23,6 @@ public class Ships_GUI : MonoBehaviour
     void Update()
     {
         no_ships = script.totalShips;
-        /*Total_ships = gameObject.GetComponent<Trigger_Spawn>();
-        //Tota*/
         txt.text = ":"+no_ships;
         
     }

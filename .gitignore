@@ -78,3 +78,7 @@ Assets/AddressableAssetsData/Windows.meta
 
 Assets/PlayFlowCloud.meta
 Assets/PlayFlowCloud/Lib.meta
+#FishNetworking stuff
+DefaultPrefabObjects.asset
+*.Cecil.sln.meta
+*.meta
