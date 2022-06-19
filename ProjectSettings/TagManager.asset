@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerAppendix
+  - ScreenEdge
+  - Enemy
+  - Planet
+  - Collector
+  - Undefined
+  - '-'
+  - +
+  - Shield
+  - + 2
+  - + 5
+  - Pawn
+  - LaserBeam
+  - Interceptor
+  - Explozie
   layers:
   - Default
   - TransparentFX

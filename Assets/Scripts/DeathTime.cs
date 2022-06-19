@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class DeathTime : MonoBehaviour
 {
-
-    // Start is called before the first frame update
+    public float Death_Time;
+  
     void Start()
     {
-        StartCoroutine(Wait(1.5f));
+        StartCoroutine(Wait(Death_Time));
     }
 
     IEnumerator Wait(float a)
     {
-        yield return new WaitForSeconds(a); //Wait two seconds
+        yield return new WaitForSeconds(a); 
         Destroy(gameObject);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
+    
 }
