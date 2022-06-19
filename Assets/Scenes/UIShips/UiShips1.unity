@@ -2591,7 +2591,7 @@ GameObject:
   - component: {fileID: 651600762}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4055,8 +4055,8 @@ MonoBehaviour:
   _hasParentNetworkObjectAtEdit: 0
   NetworkObserver: {fileID: 0}
   _prefabId: -1
-  _scenePathHash: 2968828135
-  _sceneId: 12751019748538423798
+  _scenePathHash: 2509997946
+  _sceneId: 10780359094136569321
   _sceneNetworkObjects:
   - {fileID: 1190096954}
 --- !u!1 &1232657105
