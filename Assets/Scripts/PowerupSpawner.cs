@@ -7,9 +7,10 @@ public class PowerupSpawner : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject shieldRef;
     //other powerups here
-
+    [SerializeField] private GameObject killRef;
     public GameObject shieldOnScreen;
 
+    public GameObject killPowerOnScreen;
 
     private double chance;
 
@@ -18,6 +19,7 @@ public class PowerupSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnShield());
+        StartCoroutine(SpawnKillPower());
     }
 
     private IEnumerator SpawnShield()
@@ -34,7 +36,25 @@ public class PowerupSpawner : MonoBehaviour
 
                     shieldOnScreen.transform.position = target;
                 
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(9f);
+            }
+    }
+
+    private IEnumerator SpawnKillPower()
+    {
+        while (GameObject.FindWithTag("Player") != null)
+            {
+                
+
+               
+                    target = new Vector2(Random.Range(-7, 7), this.transform.position.y);
+
+                    killPowerOnScreen = Instantiate(killRef);
+
+
+                    killPowerOnScreen.transform.position = target;
+                
+                yield return new WaitForSeconds(7f);
             }
     }
 }

@@ -16,6 +16,7 @@ TagManager:
   - +
   - Shield
   - ShieldAnimation
+  - Kill
   layers:
   - Default
   - TransparentFX
