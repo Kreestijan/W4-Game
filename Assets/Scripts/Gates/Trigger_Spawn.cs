@@ -13,7 +13,7 @@ public class Trigger_Spawn : MonoBehaviour
     [SerializeField] GameObject mainShip;
     int activeShips;
     //public GameObject effect;
-    DeathTime deathTimeScript;
+    public GameObject animation;
 
 
     // Start is called before the first frame update
@@ -82,6 +82,8 @@ public class Trigger_Spawn : MonoBehaviour
                     collision.gameObject.SetActive(false);
                     DeathTimer();
                     Destroy(collision.gameObject);
+                    var anim=animation.GetComponent<ParticleSystem>();
+                    anim.Play();
                     break;
                 }
             case "Kill":
@@ -92,6 +94,7 @@ public class Trigger_Spawn : MonoBehaviour
                     break;
 
                 }
+            
         }
     }
     

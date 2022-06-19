@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
-    [SerializeField] private float moveSpeed = 20f;
+    public float moveSpeed = 20f;
 
     [SerializeField] private float scrollSpeed = 3f;
 
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     
     private string gateOperation;
 
-    private float movementX;
+    public float movementX;
     
     public float playerHP;
 
