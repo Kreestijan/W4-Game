@@ -13,6 +13,8 @@ public class Trigger_Spawn : MonoBehaviour
     [SerializeField] GameObject mainShip;
     int activeShips;
     public GameObject effect;
+    DeathTime deathTimeScript;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,11 @@ public class Trigger_Spawn : MonoBehaviour
     {
         ActiveShips();
 
+
+    }
+    private IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(3f);
 
     }
     int ActiveShips()
@@ -66,6 +73,22 @@ public class Trigger_Spawn : MonoBehaviour
                         controller[i].SetActive(true);
                     Destroy(GameObject.FindGameObjectWithTag("+"));
                     Destroy(GameObject.FindGameObjectWithTag("-"));
+                    break;
+
+                }
+
+            case "Shield":
+                {
+                    collision.gameObject.SetActive(false);
+                    DeathTimer();
+                    Destroy(collision.gameObject);
+                    break;
+                }
+            case "Kill":
+                {
+                    collision.gameObject.SetActive(false);
+                    DeathTimer();
+                    Destroy(collision.gameObject);
                     break;
 
                 }

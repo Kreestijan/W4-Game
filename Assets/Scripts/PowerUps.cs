@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PowerUps : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     public bool isSpawned = true;
-}
+
+    private void Start()
+    {
+    }
+}   
