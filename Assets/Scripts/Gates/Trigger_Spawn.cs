@@ -12,7 +12,7 @@ public class Trigger_Spawn : MonoBehaviour
     [SerializeField] GameObject spawnerCTRL;
     [SerializeField] GameObject mainShip;
     int activeShips;
-    public GameObject effect;
+    //public GameObject effect;
     DeathTime deathTimeScript;
 
 

@@ -146,14 +146,14 @@ public class Player : MonoBehaviour
                 //shieldAnimation.GetComponent<ParticleSystem>().enableEmission = true;
             }
             
-            if(collider.gameObject.CompareTag("Kill"))
+           /* if(collider.gameObject.CompareTag("Kill"))
             {
                 Debug.Log("Collided with kill powerup");
                 enemyAI.canCollide = false;
                 enemyAI.gameObject.SetActive(false);
                 killScript.isSpawned = false;
                 killScript.gameObject.SetActive(false);
-            }
+            }*/
             if (collider.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("Collided with enemy");
