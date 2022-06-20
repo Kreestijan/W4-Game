@@ -47,8 +47,6 @@ public sealed class PawnMovement : NetworkBehaviour
             _velocity.y = desiredVelocity.y;
             _velocity.z = 0f;
 
-            Debug.Log($"Velocity: {_velocity}");
-
 
             if (_input.turbo)
             {

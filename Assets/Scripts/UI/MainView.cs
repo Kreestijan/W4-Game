@@ -5,6 +5,7 @@ public sealed class MainView : View
 {
 
     [SerializeField] private Text healthText;
+    [SerializeField] private Text playerCoordinates;
 
     private void Update()
     {
@@ -13,8 +14,6 @@ public sealed class MainView : View
         BRPlayer brplayer = BRPlayer.Instance;
 
         if (brplayer == null || brplayer.controlledPawn == null) return;
-
-        Debug.Log($"Health remaining: {brplayer.controlledPawn.health}");
 
         switch (brplayer.controlledPawn.health)
         {
@@ -36,6 +35,8 @@ public sealed class MainView : View
                 break;
 
         }
+
+        playerCoordinates.text = $"X:{brplayer.controlledPawn.transform.position.x:F2} Y:{brplayer.controlledPawn.transform.position.y:F2}";
 
     }
     
