@@ -20,6 +20,7 @@ public class BulletsVsPlayer : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        TargetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     

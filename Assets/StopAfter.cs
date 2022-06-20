@@ -10,6 +10,7 @@ public class StopAfter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        parent = GameObject.FindGameObjectWithTag("MainCamera").transform;
         Invoke("TransformP", 3f);
     }
     

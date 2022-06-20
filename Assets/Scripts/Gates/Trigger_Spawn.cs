@@ -14,7 +14,7 @@ public class Trigger_Spawn : MonoBehaviour
     int activeShips;
     //public GameObject effect;
     public GameObject animation;
-
+    bool isShielded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,13 +38,14 @@ public class Trigger_Spawn : MonoBehaviour
     { return activeShips; }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var anim = animation.GetComponent<ParticleSystem>();
         string TAG = collision.gameObject.tag;
         switch (TAG)
         {
             case "+":
                 {
-                    GameObject deer = collision.gameObject;
-                    demo = deer.GetComponent<Gates>();
+                    GameObject collisinValue = collision.gameObject;
+                    demo = collisinValue.GetComponent<Gates>();
                     totalShips += demo.Value;
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
@@ -63,7 +64,19 @@ public class Trigger_Spawn : MonoBehaviour
                 {
                     GameObject deer = collision.gameObject;
                     demo = deer.GetComponent<Gates>();
-                    totalShips -= demo.Value;
+                    if (isShielded == false)
+                    {
+                        anim.Stop();
+                        totalShips -= demo.Value;
+                        
+                    }
+                    else if (isShielded==true)
+                    {
+                        totalShips = totalShips;
+                        isShielded = false;
+                        anim.Stop();
+
+                    }
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
@@ -79,22 +92,25 @@ public class Trigger_Spawn : MonoBehaviour
 
             case "Shield":
                 {
-                    collision.gameObject.SetActive(false);
+                    isShielded = true;
                     DeathTimer();
-                    Destroy(collision.gameObject);
-                    var anim=animation.GetComponent<ParticleSystem>();
+                    Destroy(GameObject.FindGameObjectWithTag("Shield"));
+                    collision.gameObject.SetActive(true);
                     anim.Play();
                     break;
                 }
             case "Kill":
                 {
-                    collision.gameObject.SetActive(false);
+                    //collision.gameObject.SetActive(false);
                     DeathTimer();
                     Destroy(collision.gameObject);
                     break;
+                }
+            case "Enemy":
+                {
+
 
                 }
-            
         }
     }
     

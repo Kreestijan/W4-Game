@@ -19,30 +19,24 @@ public class BulletsVsEnemy : MonoBehaviour
     {
         
     }
-    private IEnumerator WaitForEnemyInRange()
-    {
-        yield return new WaitForSeconds(6f);
-    }
+    
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
-        if (player != null)
+
+        Vector2 targetPos = TargetEnemy.position;
+        Direction =  (Vector2)transform.position-targetPos;
+
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+        //navaPlayer.transform.up = Direction * Time.deltaTime;
+        if (distanceFromPlayer <= ShootingRange && nextShot < Time.time)
         {
-            Vector2 targetPos = TargetEnemy.position;
-            Direction = targetPos - (Vector2)transform.position;
 
-            float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-            navaPlayer.transform.up = Direction * Time.deltaTime;
-            if (distanceFromPlayer <= ShootingRange && nextShot < Time.time)
-            {
+            Instantiate(bullet, bulletInst.transform.position, Quaternion.identity);
+            nextShot = Time.time + .4001f;
 
-                Instantiate(bullet, bulletInst.transform.position, Quaternion.identity);
-                nextShot = Time.time + .4001f;
-
-            }
         }
-        else if (player == null)
-            Debug.Log("=============No enemy in range=============");
+            
     }
 
     private void OnDrawGizmosSelected()

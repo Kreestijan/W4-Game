@@ -35,7 +35,7 @@ public class PowerupSpawner : MonoBehaviour
  
                     shieldOnScreen.transform.position = target;
                 
-                yield return new WaitForSeconds(9f);
+                yield return new WaitForSeconds(10f);
             }
     }
 

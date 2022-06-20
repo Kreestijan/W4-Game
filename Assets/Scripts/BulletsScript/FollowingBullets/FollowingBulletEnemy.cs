@@ -6,10 +6,12 @@ public class FollowingBulletEnemy : MonoBehaviour
 {
     public float speed;
     Transform player;
+    GameObject playerObj;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
+        playerObj = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class FollowingBulletEnemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 }
 

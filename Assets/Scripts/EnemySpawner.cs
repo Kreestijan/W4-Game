@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemies());
+        
     }
 
     private IEnumerator SpawnEnemies()
@@ -33,4 +34,5 @@ public class EnemySpawner : MonoBehaviour
                 yield return new WaitForSeconds(10f);
             }
     }
+    
 }
