@@ -14,24 +14,32 @@ public class BulletsVsEnemy : MonoBehaviour
     Vector2 Direction;
     public GameObject navaPlayer;
     public Transform TargetEnemy;
-
+    //public Trigger_Spawn total;
+    //public int nrCurentShips=0;
+    int valoareShip;
     void Start()
     {
-        
+        //nrCurentShips = total.totalShips;
     }
     
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
-
+        var player1 = GameObject.FindGameObjectWithTag("Enemy");
         Vector2 targetPos = TargetEnemy.position;
-        Direction =  (Vector2)transform.position-targetPos;
-
+       
+        
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        //navaPlayer.transform.up = Direction * Time.deltaTime;
-        if (distanceFromPlayer <= ShootingRange && nextShot < Time.time)
+        
+        if (distanceFromPlayer <= ShootingRange && nextShot < Time.time )
         {
-
+            var valueShip=player1.GetComponent<Gates>();
+            valoareShip = valueShip.Value;
+            Debug.Log("valoare valoareShip  " + valoareShip);
+            
+            
+            //nrCurentShips = -valoareShip;
+           
             Instantiate(bullet, bulletInst.transform.position, Quaternion.identity);
             nextShot = Time.time + .4001f;
 

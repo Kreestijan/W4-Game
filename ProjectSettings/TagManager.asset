@@ -19,6 +19,9 @@ TagManager:
   - LaserBeam
   - Interceptor
   - Explozie
+  - ShieldAnimation
+  - Kill
+  - Interaction
   layers:
   - Default
   - TransparentFX

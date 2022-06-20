@@ -44,8 +44,8 @@ public class Trigger_Spawn : MonoBehaviour
         {
             case "+":
                 {
-                    GameObject collisinValue = collision.gameObject;
-                    demo = collisinValue.GetComponent<Gates>();
+                    GameObject collisionValue = collision.gameObject;
+                    demo = collisionValue.GetComponent<Gates>();
                     totalShips += demo.Value;
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
@@ -62,8 +62,8 @@ public class Trigger_Spawn : MonoBehaviour
 
             case "-":
                 {
-                    GameObject deer = collision.gameObject;
-                    demo = deer.GetComponent<Gates>();
+                    GameObject collisionValue = collision.gameObject;
+                    demo = collisionValue.GetComponent<Gates>();
                     if (isShielded == false)
                     {
                         anim.Stop();
@@ -103,14 +103,39 @@ public class Trigger_Spawn : MonoBehaviour
                 {
                     //collision.gameObject.SetActive(false);
                     DeathTimer();
+                    Destroy(GameObject.FindGameObjectWithTag("Enemy"));
                     Destroy(collision.gameObject);
                     break;
                 }
-            case "Enemy":
+            /*case "Enemy":
                 {
+                    GameObject collisionValue = collision.gameObject;
+                    demo = collisionValue.GetComponent<Gates>();
+                    if (isShielded == false)
+                    {
+                        anim.Stop();
+                        totalShips -= demo.Value;
 
+                    }
+                    else if (isShielded == true)
+                    {
+                        totalShips = totalShips;
+                        isShielded = false;
+                        anim.Stop();
 
-                }
+                    }
+                    totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
+                    activeShips = totalShips;
+                    activeShips = Mathf.Clamp(activeShips, 0, 15);
+                    foreach (int i in Enumerable.Range(0, 15))
+                        controller[i].SetActive(false);
+                    foreach (int i in Enumerable.Range(0, activeShips))
+                        controller[i].SetActive(true);
+                    Destroy(GameObject.FindGameObjectWithTag("+"));
+                    Destroy(GameObject.FindGameObjectWithTag("-"));
+                    break;
+
+                }*/
         }
     }
     
