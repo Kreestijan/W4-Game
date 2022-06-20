@@ -21,8 +21,24 @@ MonoBehaviour:
     m_Address: Pawn
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 5acc3dc71913de141989f1f2c6f3ee0a
-    m_Address: LaserBeam
+  - m_GUID: cd103cdaa3131a741bd0cf9c8dff73f5
+    m_Address: Assets/ShieldMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 89d8a6dac0d94f74aac0a4e3e934379c
+    m_Address: Assets/Prefabs/Enemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2fc7be252b35b1b4e8e3d1336ebc1456
+    m_Address: Assets/Prefabs/ShieldPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40a35fe5e8c189b4c82da9844843221e
+    m_Address: Assets/Prefabs/ShieldAnimationPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad00d70d8e3267e4a9ed388a560ba920
+    m_Address: Assets/Prefabs/KillPowerPrefab.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

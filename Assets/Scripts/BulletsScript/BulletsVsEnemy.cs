@@ -11,19 +11,25 @@ public class BulletsVsEnemy : MonoBehaviour
     public GameObject bulletInst;
     public float nextShot;
     public float fireRate = 1.001f;
-    
-    // Start is called before the first frame update
+    Vector2 Direction;
+    public GameObject navaPlayer;
+    public Transform TargetEnemy;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        Vector2 targetPos = TargetEnemy.position;
+        Direction = targetPos - (Vector2)transform.position;
+        
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if(distanceFromPlayer<=ShootingRange && nextShot<Time.time)
+        navaPlayer.transform.up = Direction * Time.deltaTime ;
+        if (distanceFromPlayer<=ShootingRange && nextShot<Time.time)
         {
+            
             Instantiate(bullet, bulletInst.transform.position,Quaternion.identity);
             nextShot = Time.time+.4001f ;
 
@@ -33,8 +39,6 @@ public class BulletsVsEnemy : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, lineofSight);
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, ShootingRange);
     }

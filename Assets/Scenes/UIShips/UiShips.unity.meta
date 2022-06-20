@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: d552f93d513118d498cff61396544523
+<<<<<<<< HEAD:Assets/Scenes/UIShips/UiShips.unity.meta
+guid: f542f0c8cf6dca84f832785208564318
+========
+guid: b00173e3b223a574c81d86a43acb0c7c
+folderAsset: yes
+>>>>>>>> kill-power-up-and-visual-effects:Assets/HDRPDefaultResources.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
