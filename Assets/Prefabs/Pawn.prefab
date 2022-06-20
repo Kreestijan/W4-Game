@@ -200,8 +200,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 1865952487
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &973533871012914969
 MonoBehaviour:
@@ -328,7 +328,6 @@ MonoBehaviour:
   sensitivity: 0
   turbo: 0
   fire: 0
-  joystick: {fileID: 0}
 --- !u!114 &611484222741308514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +401,7 @@ MonoBehaviour:
   - {fileID: 4014413503414582395}
   - {fileID: 3137033863226430963}
   SceneTransformProperties:
-    Position: {x: 2.961104, y: -2.1579597, z: 1}
+    Position: {x: 0, y: 0, z: 1}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
@@ -412,7 +411,7 @@ MonoBehaviour:
   _scenePathHash: 0
   _sceneId: 0
   _sceneNetworkObjects:
-  - {fileID: 2359870106909147996}
+  - {fileID: 0}
   - {fileID: 4683248696927807984}
   - {fileID: 0}
   - {fileID: 0}
@@ -620,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 6936050008275233253, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 2359870106909147996}
+      objectReference: {fileID: 0}
     - target: {fileID: 6936050008275233253, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
@@ -665,6 +664,26 @@ PrefabInstance:
       propertyPath: SceneTransformProperties.LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: _hasParentNetworkObjectAtEdit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: SceneTransformProperties.Position.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: SceneTransformProperties.Rotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: SceneTransformProperties.Rotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: SceneTransformProperties.Rotation.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _addedNetworkObject
       value: 
@@ -672,24 +691,13 @@ PrefabInstance:
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _networkObjectCache
       value: 
-      objectReference: {fileID: 2359870106909147996}
+      objectReference: {fileID: 4683248696927807984}
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _componentIndexCache
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
---- !u!114 &2359870106909147996 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6936050008275233253, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
-  m_PrefabInstance: {fileID: 4683248695766231737}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3137033863226430963 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
