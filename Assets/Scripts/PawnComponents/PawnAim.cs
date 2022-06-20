@@ -12,16 +12,33 @@ public class PawnAim : NetworkBehaviour
 
     private float rotationSpeed = 900f;
 
-    private void Update()
+    private PawnInput _input;
+
+    public override void OnStartNetwork()
+    {
+        base.OnStartNetwork();
+
+        _input = GetComponent<PawnInput>();
+        
+    }
+
+        private void Update()
     {
         if(!IsOwner) return;
-        
 
-        mousePosition = UtilsClass.GetMouseWorldPosition();
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            directionOfRotation = new(_input.horizontal, _input.vertical);
 
-        aimDirection = (mousePosition - transform.position).normalized;
+        }
+        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            mousePosition = UtilsClass.GetMouseWorldPosition();
 
-        directionOfRotation = new(aimDirection.x, aimDirection.y);
+            aimDirection = (mousePosition - transform.position).normalized;
+
+            directionOfRotation = new(aimDirection.x, aimDirection.y);
+        }
 
         if (directionOfRotation != Vector2.zero)
         {

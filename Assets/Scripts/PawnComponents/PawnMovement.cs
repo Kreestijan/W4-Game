@@ -1,5 +1,4 @@
 using FishNet.Object;
-using UnityEditor;
 using UnityEngine;
 
 public sealed class PawnMovement : NetworkBehaviour
@@ -27,23 +26,39 @@ public sealed class PawnMovement : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        Vector3 desiredVelocity = Vector3.ClampMagnitude(((transform.up * _input.vertical) + (transform.right * _input.horizontal)) * speed, speed);
-
-        _velocity.x = desiredVelocity.x;
-        _velocity.y = desiredVelocity.y;
-        _velocity.z = 0f;
-
-
-        if (_input.turbo)
+        if (Application.platform == RuntimePlatform.Android)
         {
-            _playerBody.velocity = _velocity * turboMultiplier;
+            _velocity = new(_input.horizontal * speed, _input.vertical * speed, 0.0f);
+
+            if(_input.horizontal >= 0.95 || _input.vertical >= 0.95)
+            {
+                _playerBody.velocity = _velocity * turboMultiplier;
+            }
+            else
+            {
+                _playerBody.velocity = _velocity;
+            }
         }
-        else
+        else if(Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            _playerBody.velocity = _velocity;
+            Vector3 desiredVelocity = Vector3.ClampMagnitude(((transform.up * _input.vertical) + (transform.right * _input.horizontal)) * speed, speed);
+
+            _velocity.x = desiredVelocity.x;
+            _velocity.y = desiredVelocity.y;
+            _velocity.z = 0f;
+
+            Debug.Log($"Velocity: {_velocity}");
+
+
+            if (_input.turbo)
+            {
+                _playerBody.velocity = _velocity * turboMultiplier;
+            }
+            else
+            {
+                _playerBody.velocity = _velocity;
+            }
         }
-
-
     }
 
 

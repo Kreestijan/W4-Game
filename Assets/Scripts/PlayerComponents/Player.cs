@@ -40,8 +40,10 @@ public class Player : MonoBehaviour
 
     private Vector3 mousePosition;
     private Vector3 aimDirection;
+    
     [SerializeField] bool isShielded = false;
 
+    private float accelerometerMultiplier = 1.7f;
     public Transform shieldAnimation;
 
     EnemySpawner enemySpawnerScript;
@@ -86,7 +88,14 @@ public class Player : MonoBehaviour
     
     private void GetPlayerInput()
     {
-        movementX = Input.GetAxisRaw("Horizontal");
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            movementX = Input.acceleration.x * accelerometerMultiplier;
+        }
+        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            movementX = Input.GetAxisRaw("Horizontal");
+        }
     }
 
     void ReassignInstances()//function for reassigning the instances of new clones
@@ -122,11 +131,6 @@ public class Player : MonoBehaviour
 
     private void MovePlayer()
     {
-        mousePosition = UtilsClass.GetMouseWorldPosition();
-
-        aimDirection = (mousePosition - transform.position).normalized;
-
-
 
         playerBody.velocity = new Vector2(movementX * moveSpeed, scrollSpeed);
     }

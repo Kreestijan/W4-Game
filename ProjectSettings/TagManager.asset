@@ -17,6 +17,8 @@ TagManager:
   - + 5
   - Pawn
   - LaserBeam
+  - Joystick
+  - MobileView
   - Interceptor
   - Explozie
   layers:
