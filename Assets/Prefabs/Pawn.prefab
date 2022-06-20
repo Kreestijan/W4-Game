@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 4724495449535177925}
   - component: {fileID: 4604193216400424914}
   - component: {fileID: 4014413503414582395}
+  - component: {fileID: 750416240451162602}
   m_Layer: 6
   m_Name: Pawn
   m_TagString: Pawn
@@ -399,9 +400,10 @@ MonoBehaviour:
   - {fileID: 2992924378335467139}
   - {fileID: -3043427079015301915}
   - {fileID: 4014413503414582395}
+  - {fileID: 750416240451162602}
   - {fileID: 3137033863226430963}
   SceneTransformProperties:
-    Position: {x: 0, y: 0, z: 1}
+    Position: {x: 5.4742465, y: -1.9370571, z: 1}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
@@ -411,7 +413,7 @@ MonoBehaviour:
   _scenePathHash: 0
   _sceneId: 0
   _sceneNetworkObjects:
-  - {fileID: 0}
+  - {fileID: 2762870838420091005}
   - {fileID: 4683248696927807984}
   - {fileID: 0}
   - {fileID: 0}
@@ -514,6 +516,22 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 4683248696927807984}
   _text: {fileID: 7263794464673803498}
   playerNameOffset: 0.85
+--- !u!114 &750416240451162602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683248696927807991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4869b2bde9fd97e4a92b2efb9de73848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 7
+  _addedNetworkObject: {fileID: 4683248696927807984}
+  _networkObjectCache: {fileID: 4683248696927807984}
+  myCamera: {fileID: 0}
 --- !u!1 &6156729399329385104
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +684,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _hasParentNetworkObjectAtEdit
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: _sceneNetworkObjects.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: _sceneNetworkObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 2762870838420091005}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: _sceneNetworkObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 4683248696927807984}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: SceneTransformProperties.Position.x
+      value: 5.4742465
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+      propertyPath: SceneTransformProperties.Position.y
+      value: -1.9370571
       objectReference: {fileID: 0}
     - target: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: SceneTransformProperties.Position.z
@@ -691,13 +729,24 @@ PrefabInstance:
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _networkObjectCache
       value: 
-      objectReference: {fileID: 4683248696927807984}
+      objectReference: {fileID: 2762870838420091005}
     - target: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
       propertyPath: _componentIndexCache
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+--- !u!114 &2762870838420091005 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7397599459357858500, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
+  m_PrefabInstance: {fileID: 4683248695766231737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3137033863226430963 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7743594646278684490, guid: a1181e8e3d140dd4f933e0fd4ae9f679, type: 3}
