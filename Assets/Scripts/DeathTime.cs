@@ -9,10 +9,12 @@ public class DeathTime : MonoBehaviour
     void Start()
     {
         StartCoroutine(Wait(Death_Time));
+        
     }
 
     IEnumerator Wait(float a)
     {
+        
         yield return new WaitForSeconds(a); 
         Destroy(gameObject);
     }

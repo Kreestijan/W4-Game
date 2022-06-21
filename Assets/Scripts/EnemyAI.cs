@@ -8,8 +8,14 @@ public class EnemyAI : MonoBehaviour
 
     public Vector2 velocity;
     public float enemyHP;
-
+    Player playerScript;
+    GameObject player;
     public bool canCollide = true;
+
+    private void Awake()
+    {
+        playerScript = player.GetComponent<Player>();
+    }
     void Start()
     {
         enabled = false;
@@ -20,8 +26,11 @@ public class EnemyAI : MonoBehaviour
     
     void UpdateEnemyPosition()
     {
+        
         Vector3 position = transform.localPosition;
-        position.y -= velocity.y * Time.deltaTime;
+        /*velocity.x = playerScript.movementX*playerScript.moveSpeed;
+        position.x = velocity.x* Time.deltaTime;*/
+       // position.y -= velocity.y * Time.deltaTime;
         transform.localPosition = position;
     }
     void Update()

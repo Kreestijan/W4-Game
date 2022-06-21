@@ -32,11 +32,10 @@ public class PowerupSpawner : MonoBehaviour
                     target = new Vector2(Random.Range(-7, 7), this.transform.position.y);
 
                     shieldOnScreen = Instantiate(shieldRef);
-
-
+ 
                     shieldOnScreen.transform.position = target;
                 
-                yield return new WaitForSeconds(9f);
+                yield return new WaitForSeconds(10f);
             }
     }
 
