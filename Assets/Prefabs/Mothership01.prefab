@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 458854071192626783}
   - component: {fileID: 7743594646278684490}
   - component: {fileID: 7397599459357858500}
+  - component: {fileID: 6936050008275233253}
   m_Layer: 6
   m_Name: Mothership01
   m_TagString: Untagged
@@ -140,6 +141,30 @@ MonoBehaviour:
     Position: {x: 0, y: 0, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
+  _isNetworked: 1
+  _hasParentNetworkObjectAtEdit: 0
+  NetworkObserver: {fileID: 0}
+  _prefabId: 6
+  _scenePathHash: 0
+  _sceneId: 0
+  _sceneNetworkObjects: []
+--- !u!114 &6936050008275233253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950729743429613953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _networkBehaviours: []
+  SceneTransformProperties:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 0}
+    LocalScale: {x: 0, y: 0, z: 0}
   _isNetworked: 1
   _hasParentNetworkObjectAtEdit: 0
   NetworkObserver: {fileID: 0}
