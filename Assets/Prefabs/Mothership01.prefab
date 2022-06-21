@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7743594646278684490}
   - component: {fileID: 7397599459357858500}
   - component: {fileID: 6936050008275233253}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Mothership01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fc4a18649866e42adf1c256048ec50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
+  _componentIndexCache: 8
   _addedNetworkObject: {fileID: 7397599459357858500}
-  _networkObjectCache: {fileID: 7397599459357858500}
+  _networkObjectCache: {fileID: 0}
 --- !u!114 &7397599459357858500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,16 +138,23 @@ MonoBehaviour:
   _networkBehaviours:
   - {fileID: 7743594646278684490}
   SceneTransformProperties:
-    Position: {x: 0, y: 0, z: 0}
-    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    Position: {x: 0, y: 0, z: 1}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
-  _hasParentNetworkObjectAtEdit: 0
+  _hasParentNetworkObjectAtEdit: 1
   NetworkObserver: {fileID: 0}
   _prefabId: 6
   _scenePathHash: 0
   _sceneId: 0
-  _sceneNetworkObjects: []
+  _sceneNetworkObjects:
+  - {fileID: 7397599459357858500}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6936050008275233253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,15 +167,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _networkBehaviours: []
+  _networkBehaviours:
+  - {fileID: 7743594646278684490}
   SceneTransformProperties:
-    Position: {x: 0, y: 0, z: 0}
-    Rotation: {x: 0, y: 0, z: 0, w: 0}
-    LocalScale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 1}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
-  _hasParentNetworkObjectAtEdit: 0
+  _hasParentNetworkObjectAtEdit: 1
   NetworkObserver: {fileID: 0}
   _prefabId: -1
   _scenePathHash: 0
   _sceneId: 0
-  _sceneNetworkObjects: []
+  _sceneNetworkObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
