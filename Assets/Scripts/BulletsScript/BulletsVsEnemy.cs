@@ -11,12 +11,12 @@ public class BulletsVsEnemy : MonoBehaviour
     public GameObject bulletInst;
     public float nextShot;
     public float fireRate = 1.001f;
-    Vector2 Direction;
     public GameObject navaPlayer;
     public Transform TargetEnemy;
-    //public Trigger_Spawn total;
-    //public int nrCurentShips=0;
+    GameObject player1;
     int valoareShip;
+    GameObject instance;
+
     void Start()
     {
         //nrCurentShips = total.totalShips;
@@ -25,7 +25,7 @@ public class BulletsVsEnemy : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Enemy").transform;
-        var player1 = GameObject.FindGameObjectWithTag("Enemy");
+        player1 = GameObject.FindGameObjectWithTag("Enemy");
         Vector2 targetPos = TargetEnemy.position;
        
         
@@ -33,18 +33,24 @@ public class BulletsVsEnemy : MonoBehaviour
         
         if (distanceFromPlayer <= ShootingRange && nextShot < Time.time )
         {
-            var valueShip=player1.GetComponent<Gates>();
-            valoareShip = valueShip.Value;
-            Debug.Log("valoare valoareShip  " + valoareShip);
-            
-            
-            //nrCurentShips = -valoareShip;
-           
-            Instantiate(bullet, bulletInst.transform.position, Quaternion.identity);
-            nextShot = Time.time + .4001f;
+            if (player1 != false)
+            {
+                var valueShip = player1.GetComponent<Gates>();
+                valoareShip = valueShip.Value;
+                Debug.Log("valoare valoareShip  " + valoareShip);
+          
+                //nrCurentShips = -valoareShip;
+                instance=Instantiate(bullet, bulletInst.transform.position, Quaternion.identity);
+                nextShot = Time.time + .4001f;
+            } 
 
         }
-            
+         if (TargetEnemy.position==null) 
+        {
+            Debug.Log("no enemy============");
+            Destroy(instance);
+        }
+
     }
 
     private void OnDrawGizmosSelected()
