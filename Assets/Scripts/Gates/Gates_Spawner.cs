@@ -30,12 +30,11 @@ public class Gates_Spawner : MonoBehaviour
 
                 if (chance == 0)
                 {
-                    Debug.Log("chance0");
+                    
                     target1 = new Vector2(this.transform.position.x - 4.8f, this.transform.position.y);
                     target2 = new Vector2(this.transform.position.x + 4.8f, this.transform.position.y);
 
-                    //randomIndex = Random.Range(0, gateReference.Length);
-
+                  
                     gateSpawned1 = Instantiate(gateReference[0]);
                     gateSpawned2 = Instantiate(gateReference[1]);
                     gateSpawned1.transform.position = target1;
@@ -45,11 +44,9 @@ public class Gates_Spawner : MonoBehaviour
                 }
                 else if (chance == 1)
                 {
-                    Debug.Log("chance1");
+                    
                     target1 = new Vector2(this.transform.position.x - 4.8f, this.transform.position.y);
                     target2 = new Vector2(this.transform.position.x + 4.8f, this.transform.position.y);
-
-                    //randomIndex = Random.Range(0, gateReference.Length);
 
                     gateSpawned1 = Instantiate(gateReference[1]);
                     gateSpawned2 = Instantiate(gateReference[0]);

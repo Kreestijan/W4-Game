@@ -21,6 +21,9 @@ TagManager:
   - MobileView
   - Interceptor
   - Explozie
+  - ShieldAnimation
+  - Kill
+  - Interaction
   layers:
   - Default
   - TransparentFX

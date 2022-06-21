@@ -11,28 +11,44 @@ public class BulletsVsEnemy : MonoBehaviour
     public GameObject bulletInst;
     public float nextShot;
     public float fireRate = 1.001f;
-    Vector2 Direction;
     public GameObject navaPlayer;
     public Transform TargetEnemy;
+    GameObject player1;
+    int valoareShip;
+    GameObject instance;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //nrCurentShips = total.totalShips;
     }
-
+    
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Enemy").transform;
+        player1 = GameObject.FindGameObjectWithTag("Enemy");
         Vector2 targetPos = TargetEnemy.position;
-        Direction = targetPos - (Vector2)transform.position;
+       
         
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        navaPlayer.transform.up = Direction * Time.deltaTime ;
-        if (distanceFromPlayer<=ShootingRange && nextShot<Time.time)
+        
+        if (distanceFromPlayer <= ShootingRange && nextShot < Time.time )
         {
-            
-            Instantiate(bullet, bulletInst.transform.position,Quaternion.identity);
-            nextShot = Time.time+.4001f ;
+            if (player1 != false)
+            {
+                var valueShip = player1.GetComponent<Gates>();
+                valoareShip = valueShip.Value;
+                Debug.Log("valoare valoareShip  " + valoareShip);
+          
+                //nrCurentShips = -valoareShip;
+                instance=Instantiate(bullet, bulletInst.transform.position, Quaternion.identity);
+                nextShot = Time.time + .4001f;
+            } 
 
+        }
+         if (TargetEnemy.position==null) 
+        {
+            Debug.Log("no enemy============");
+            Destroy(instance);
         }
 
     }
