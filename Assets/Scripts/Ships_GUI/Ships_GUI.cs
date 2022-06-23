@@ -23,7 +23,7 @@ public class Ships_GUI : MonoBehaviour
     void Update()
     {
         no_ships = script.totalShips;
-        txt.text = ":"+no_ships;
+        txt.text = ":" + no_ships;
         
     }
     
