@@ -9,6 +9,8 @@ public class PawnWeapon : NetworkBehaviour
 
     private PawnInput _input;
 
+    private AudioSource soundEffect;
+
     public static PawnWeapon Instance { get; private set; }
 
     public override void OnStartClient()
@@ -32,6 +34,8 @@ public class PawnWeapon : NetworkBehaviour
 
         if (_input.fire)
         {
+            GetComponent<Pawn>().PlayAudio("LaserEffect", 0);
+
             ServerFire();
 
             _input.fire = false;

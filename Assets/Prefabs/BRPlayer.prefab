@@ -50,6 +50,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 2673841188171906450}
   nickname: 
   isReady: 0
+  controlledPawn: {fileID: 0}
 --- !u!114 &2673841188171906450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +72,7 @@ MonoBehaviour:
   _isNetworked: 1
   _hasParentNetworkObjectAtEdit: 0
   NetworkObserver: {fileID: 0}
-  _prefabId: -1
+  _prefabId: 4
   _scenePathHash: 0
   _sceneId: 0
   _sceneNetworkObjects:

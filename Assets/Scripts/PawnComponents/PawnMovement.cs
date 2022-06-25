@@ -10,7 +10,7 @@ public sealed class PawnMovement : NetworkBehaviour
 
     private Rigidbody2D _playerBody;
 
-    private Vector3 _velocity;
+    public Vector3 _velocity;
     
     public override void OnStartNetwork()
     {
