@@ -60,6 +60,8 @@ public sealed class BRPlayer : NetworkBehaviour
         GameObject pawnPrefab = Addressables.LoadAssetAsync<GameObject>("Pawn").WaitForCompletion();
         GameObject pawnInstance = Instantiate(pawnPrefab);
 
+        pawnPrefab.transform.position = new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), Random.value);
+
         Spawn(pawnInstance, Owner);
 
         controlledPawn = pawnInstance.GetComponent<Pawn>();
