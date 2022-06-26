@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Trigger_Spawn : MonoBehaviour
 
@@ -54,6 +55,7 @@ public class Trigger_Spawn : MonoBehaviour
                     GameObject collisionValue = collision.gameObject;
                     demo = collisionValue.GetComponent<Gates>();
                     totalShips += demo.Value;
+                    //playerScript.playerHP += demo.Value;
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
                     activeShips = Mathf.Clamp(activeShips, 0, 15);
@@ -71,18 +73,19 @@ public class Trigger_Spawn : MonoBehaviour
                 {
                     GameObject collisionValue = collision.gameObject;
                     demo = collisionValue.GetComponent<Gates>();
+                    Debug.Log("Collided with negative gate -- NR OF SHIPS = " + totalShips);
                     if (isShielded == false)
                     {
                         anim.Stop();
                         totalShips -= demo.Value;
-                        
+                        Debug.Log("Negative gate without shield NR OF SHIPS = " + totalShips);
+                        //playerScript.playerHP -= demo.Value;
                     }
                     else if (isShielded==true)
                     {
-                        totalShips = totalShips;
                         isShielded = false;
                         anim.Stop();
-
+                        Debug.Log("Negative gate with shield NR OF SHIPS = " + totalShips);
                     }
                     totalShips = (int)Mathf.Clamp(totalShips, 0, Mathf.Infinity);
                     activeShips = totalShips;
@@ -93,6 +96,8 @@ public class Trigger_Spawn : MonoBehaviour
                         controller[i].SetActive(true);
                     Destroy(GameObject.FindGameObjectWithTag("+"));
                     Destroy(GameObject.FindGameObjectWithTag("-"));
+                    //if(playerScript.playerHP<0) Destroy(player);
+                    if(totalShips == 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     break;
 
                 }
